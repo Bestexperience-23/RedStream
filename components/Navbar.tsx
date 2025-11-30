@@ -35,7 +35,7 @@ const Navbar: React.FC<Props> = ({ lang, content, onLanguageChange }) => {
           
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center">
+            <div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center shadow-lg shadow-red-600/20">
                 <Terminal className="text-white w-5 h-5" />
             </div>
             <span className="text-xl font-bold font-mono tracking-tighter text-white">
@@ -49,9 +49,10 @@ const Navbar: React.FC<Props> = ({ lang, content, onLanguageChange }) => {
               <a 
                 key={link.name} 
                 href={link.href} 
-                className="text-sm font-medium text-gray-300 hover:text-red-500 transition-colors uppercase tracking-wide"
+                className="text-sm font-medium text-gray-300 hover:text-red-500 transition-colors uppercase tracking-wide relative group"
               >
                 {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
             <LanguageSelector currentLang={lang} onLanguageChange={onLanguageChange} />
@@ -59,7 +60,7 @@ const Navbar: React.FC<Props> = ({ lang, content, onLanguageChange }) => {
               href={WHATSAPP_LINK} 
               target="_blank" 
               rel="noreferrer"
-              className="bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2 px-4 rounded-sm transition-all transform hover:scale-105 border border-red-500 shadow-[0_0_10px_rgba(220,38,38,0.5)]"
+              className="btn-tech btn-tech-red text-white text-xs font-bold py-2.5 px-6 rounded-sm"
             >
               {content.tryNow}
             </a>
@@ -95,7 +96,7 @@ const Navbar: React.FC<Props> = ({ lang, content, onLanguageChange }) => {
             href={WHATSAPP_LINK}
             target="_blank" 
             rel="noreferrer" 
-            className="block text-center bg-red-600 text-white py-3 rounded-sm font-bold"
+            className="block text-center btn-tech btn-tech-red text-white py-3 rounded-sm font-bold"
           >
             {content.tryNow}
           </a>

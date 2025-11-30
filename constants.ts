@@ -54,35 +54,35 @@ export const TRANSLATIONS: Record<Language, Content> = {
       plans: [
         {
           name: "Starter",
-          price: "€15",
+          price: "€12",
           period: "1 Month",
-          features: ["1 Device", "4K/FHD/HD Quality", "Anti-Freeze Technology", "24/7 Support"],
+          features: ["1 Device", "4K/FHD/HD Quality", "Anti-Freeze Technology", "24/7 Support", "Full VOD Library"],
           button: "Order Now"
         },
         {
-          name: "Premium",
-          price: "€40",
-          period: "6 Months",
-          features: ["2 Connections", "4K/FHD/HD Quality", "Anti-Freeze Technology", "VIP Support", "VOD Library"],
+          name: "Eco Year",
+          price: "€29",
+          period: "12 Months",
+          features: ["1 Device", "FHD/HD Quality", "Live TV Only (No VOD)", "Standard Support", "Stable Connection"],
+          button: "Order Now"
+        },
+        {
+          name: "Elite Year",
+          price: "€49",
+          period: "12 Months",
+          features: ["3 Devices", "4K/8K Ultra HD", "Live TV + VOD (Movies)", "VIP Priority Support", "Anti-Freeze Max"],
           button: "Order Now",
           recommended: true
-        },
-        {
-          name: "Ultimate",
-          price: "€65",
-          period: "12 Months",
-          features: ["3 Connections", "4K/FHD/HD Quality", "Anti-Freeze Technology", "VIP Support", "VOD + Series"],
-          button: "Order Now"
         }
       ]
     },
     faq: {
       title: "Frequently Asked Questions",
       items: [
+        { question: "What is the difference between Eco and Elite?", answer: "The Eco plan (€29) offers Live TV only in FHD. The Elite plan (€49) includes 4K quality, VOD (Movies & Series), and supports up to 3 devices." },
         { question: "How fast is the delivery?", answer: "Delivery is instant. You will receive your credentials via WhatsApp or Email immediately after payment." },
         { question: "Does it work on my device?", answer: "Yes! We support Smart TVs (Samsung, LG), Android Box, Firestick, Apple TV, Mag, PC, and Mobile." },
-        { question: "Do I need a VPN?", answer: "No, our service is secure and does not require a VPN. However, you can use one if you prefer." },
-        { question: "What internet speed do I need?", answer: "We recommend at least 12 Mbps for 4K streaming and 8 Mbps for HD channels." }
+        { question: "Do I need a VPN?", answer: "No, our service is secure and does not require a VPN. However, you can use one if you prefer." }
       ]
     },
     support: {
@@ -143,35 +143,35 @@ export const TRANSLATIONS: Record<Language, Content> = {
       plans: [
         {
           name: "Starter",
-          price: "15€",
+          price: "12€",
           period: "1 Mois",
-          features: ["1 Appareil", "Qualité 4K/FHD/HD", "Technologie Anti-Freeze", "Support 24/7"],
+          features: ["1 Appareil", "Qualité 4K/FHD", "Anti-Freeze", "Support 24/7", "VOD Incluse"],
           button: "Commander"
         },
         {
-          name: "Premium",
-          price: "40€",
-          period: "6 Mois",
-          features: ["2 Connexions", "Qualité 4K/FHD/HD", "Technologie Anti-Freeze", "Support VIP", "Bibliothèque VOD"],
+          name: "Éco Annuel",
+          price: "29€",
+          period: "12 Mois",
+          features: ["1 Appareil", "Qualité FHD/HD", "TV Direct (Pas de VOD)", "Support Standard", "Connexion Stable"],
+          button: "Commander"
+        },
+        {
+          name: "Élite Annuel",
+          price: "49€",
+          period: "12 Mois",
+          features: ["3 Appareils", "Qualité 4K/8K UHD", "TV + VOD (Films/Séries)", "Support VIP Prioritaire", "Anti-Freeze Max"],
           button: "Commander",
           recommended: true
-        },
-        {
-          name: "Ultimate",
-          price: "65€",
-          period: "12 Mois",
-          features: ["3 Connexions", "Qualité 4K/FHD/HD", "Technologie Anti-Freeze", "Support VIP", "VOD + Séries"],
-          button: "Commander"
         }
       ]
     },
     faq: {
       title: "Questions Fréquentes",
       items: [
+        { question: "Quelle différence entre Éco et Élite ?", answer: "Le plan Éco (29€) offre la TV en direct en FHD sans VOD. Le plan Élite (49€) inclut la 4K, toute la VOD (Films/Séries) et 3 écrans." },
         { question: "Quelle est la vitesse de livraison ?", answer: "La livraison est immédiate. Vous recevez vos identifiants par WhatsApp ou Email juste après le paiement." },
         { question: "Est-ce compatible avec mon appareil ?", answer: "Oui ! Nous supportons Smart TV (Samsung, LG), Android Box, Firestick, Apple TV, Mag, PC et Mobile." },
-        { question: "Ai-je besoin d'un VPN ?", answer: "Non, notre service est sécurisé et ne nécessite pas de VPN. Cependant, vous pouvez en utiliser un si vous le souhaitez." },
-        { question: "Quelle vitesse internet est requise ?", answer: "Nous recommandons au moins 12 Mbps pour la 4K et 8 Mbps pour la HD." }
+        { question: "Ai-je besoin d'un VPN ?", answer: "Non, notre service est sécurisé et ne nécessite pas de VPN. Cependant, vous pouvez en utiliser un si vous le souhaitez." }
       ]
     },
     support: {
@@ -232,35 +232,35 @@ export const TRANSLATIONS: Record<Language, Content> = {
       plans: [
         {
           name: "Starter",
-          price: "€15",
+          price: "€12",
           period: "1 Mese",
-          features: ["1 Dispositivo", "Qualità 4K/FHD/HD", "Anti-Freeze", "Supporto 24/7"],
+          features: ["1 Dispositivo", "Qualità 4K/FHD", "Anti-Freeze", "Supporto 24/7", "VOD Inclusi"],
           button: "Ordina Ora"
         },
         {
-          name: "Premium",
-          price: "€40",
-          period: "6 Mesi",
-          features: ["2 Connessioni", "Qualità 4K/FHD/HD", "Anti-Freeze", "Supporto VIP", "Libreria VOD"],
+          name: "Eco Annuale",
+          price: "€29",
+          period: "12 Mesi",
+          features: ["1 Dispositivo", "Qualità FHD/HD", "Solo Live TV (No VOD)", "Supporto Standard", "Connessione Stabile"],
+          button: "Ordina Ora"
+        },
+        {
+          name: "Elite Annuale",
+          price: "€49",
+          period: "12 Mesi",
+          features: ["3 Dispositivi", "Qualità 4K/8K", "Live TV + VOD (Film)", "Supporto VIP", "Anti-Freeze Max"],
           button: "Ordina Ora",
           recommended: true
-        },
-        {
-          name: "Ultimate",
-          price: "€65",
-          period: "12 Mesi",
-          features: ["3 Connessioni", "Qualità 4K/FHD/HD", "Anti-Freeze", "Supporto VIP", "VOD + Serie"],
-          button: "Ordina Ora"
         }
       ]
     },
     faq: {
       title: "Domande Frequenti",
       items: [
+        { question: "Qual è la differenza tra Eco ed Elite?", answer: "Il piano Eco (€29) offre solo canali Live in FHD. Il piano Elite (€49) include 4K, VOD (Film/Serie) e 3 dispositivi." },
         { question: "Quanto è veloce la consegna?", answer: "La consegna è immediata. Riceverai le credenziali via WhatsApp o Email subito dopo il pagamento." },
         { question: "Funziona sul mio dispositivo?", answer: "Sì! Supportiamo Smart TV, Android Box, Firestick, Apple TV, Mag, PC e Smartphone." },
-        { question: "Serve una VPN?", answer: "No, il servizio è sicuro e non richiede VPN. Tuttavia puoi usarne una se preferisci." },
-        { question: "Che velocità internet serve?", answer: "Raccomandiamo almeno 12 Mbps per il 4K e 8 Mbps per l'HD." }
+        { question: "Serve una VPN?", answer: "No, il servizio è sicuro e non richiede VPN. Tuttavia puoi usarne una se preferisci." }
       ]
     },
     support: {
@@ -321,35 +321,35 @@ export const TRANSLATIONS: Record<Language, Content> = {
       plans: [
         {
           name: "Starter",
-          price: "€15",
+          price: "€12",
           period: "1 Mes",
-          features: ["1 Dispositivo", "Calidad 4K/FHD/HD", "Anti-Freeze", "Soporte 24/7"],
+          features: ["1 Dispositivo", "Calidad 4K/FHD", "Anti-Freeze", "Soporte 24/7", "Incluye VOD"],
           button: "Pedir Ahora"
         },
         {
-          name: "Premium",
-          price: "€40",
-          period: "6 Meses",
-          features: ["2 Conexiones", "Calidad 4K/FHD/HD", "Anti-Freeze", "Soporte VIP", "Biblioteca VOD"],
+          name: "Eco Anual",
+          price: "€29",
+          period: "12 Meses",
+          features: ["1 Dispositivo", "Calidad FHD/HD", "Solo TV en Vivo (Sin VOD)", "Soporte Estándar", "Conexión Estable"],
+          button: "Pedir Ahora"
+        },
+        {
+          name: "Élite Anual",
+          price: "€49",
+          period: "12 Meses",
+          features: ["3 Conexiones", "Calidad 4K/8K", "TV + VOD (Películas)", "Soporte VIP", "Anti-Freeze Max"],
           button: "Pedir Ahora",
           recommended: true
-        },
-        {
-          name: "Ultimate",
-          price: "€65",
-          period: "12 Meses",
-          features: ["3 Conexiones", "Calidad 4K/FHD/HD", "Anti-Freeze", "Soporte VIP", "VOD + Series"],
-          button: "Pedir Ahora"
         }
       ]
     },
     faq: {
       title: "Preguntas Frecuentes",
       items: [
+        { question: "¿Diferencia entre Eco y Élite?", answer: "El plan Eco (€29) es solo TV en Vivo FHD. El plan Élite (€49) incluye 4K, VOD (Películas/Series) y 3 dispositivos." },
         { question: "¿Qué tan rápida es la entrega?", answer: "La entrega es inmediata. Recibirás tus credenciales por WhatsApp o Email justo después del pago." },
         { question: "¿Funciona en mi dispositivo?", answer: "¡Sí! Soportamos Smart TV, Android Box, Firestick, Apple TV, Mag, PC y Móvil." },
-        { question: "¿Necesito una VPN?", answer: "No, nuestro servicio es seguro y no requiere VPN. Sin embargo, puedes usar una si prefieres." },
-        { question: "¿Qué velocidad de internet necesito?", answer: "Recomendamos al menos 12 Mbps para 4K y 8 Mbps para HD." }
+        { question: "¿Necesito una VPN?", answer: "No, nuestro servicio es seguro y no requiere VPN. Sin embargo, puedes usar una si prefieres." }
       ]
     },
     support: {
@@ -410,35 +410,35 @@ export const TRANSLATIONS: Record<Language, Content> = {
       plans: [
         {
           name: "البداية",
-          price: "€15",
+          price: "€12",
           period: "1 شهر",
-          features: ["جهاز واحد", "جودة 4K/FHD/HD", "تقنية منع التجميد", "دعم 24/7"],
+          features: ["جهاز واحد", "جودة 4K/FHD", "تقنية منع التجميد", "دعم 24/7", "مكتبة VOD كاملة"],
           button: "اطلب الآن"
         },
         {
-          name: "المميزة",
-          price: "€40",
-          period: "6 أشهر",
-          features: ["اتصالين", "جودة 4K/FHD/HD", "تقنية منع التجميد", "دعم VIP", "مكتبة أفلام ومسلسلات"],
+          name: "اقتصادي سنوي",
+          price: "€29",
+          period: "12 شهر",
+          features: ["جهاز واحد", "جودة FHD/HD", "قنوات مباشرة فقط", "بدون مكتبة أفلام", "اتصال مستقر"],
+          button: "اطلب الآن"
+        },
+        {
+          name: "النخبة سنوي",
+          price: "€49",
+          period: "12 شهر",
+          features: ["3 اتصالات", "جودة 4K/8K", "قنوات + أفلام ومسلسلات", "دعم VIP فوري", "ثبات عالي جداً"],
           button: "اطلب الآن",
           recommended: true
-        },
-        {
-          name: "القصوى",
-          price: "€65",
-          period: "12 شهر",
-          features: ["3 اتصالات", "جودة 4K/FHD/HD", "تقنية منع التجميد", "دعم VIP", "مكتبة شاملة"],
-          button: "اطلب الآن"
         }
       ]
     },
     faq: {
       title: "الأسئلة الشائعة",
       items: [
+        { question: "ما الفرق بين الباقة الاقتصادية والنخبة؟", answer: "الباقة الاقتصادية (29€) تشمل قنوات مباشرة فقط بجودة FHD. باقة النخبة (49€) تشمل مكتبة الأفلام والمسلسلات وجودة 4K و3 أجهزة." },
         { question: "ما سرعة التسليم؟", answer: "التسليم فوري. ستتلقى بيانات الاشتراك عبر واتساب أو البريد الإلكتروني فور الدفع." },
         { question: "هل يعمل على جهازي؟", answer: "نعم! ندعم جميع الأجهزة الذكية، أندرويد بوكس، الهواتف، والحواسيب." },
-        { question: "هل أحتاج إلى VPN؟", answer: "لا، خدمتنا آمنة ولا تتطلب VPN. لكن يمكنك استخدامه إذا رغبت." },
-        { question: "ما هي سرعة الإنترنت المطلوبة؟", answer: "نوصي بسرعة 12 ميجابايت على الأقل لجودة 4K و 8 ميجابايت لجودة HD." }
+        { question: "هل أحتاج إلى VPN؟", answer: "لا، خدمتنا آمنة ولا تتطلب VPN. لكن يمكنك استخدامه إذا رغبت." }
       ]
     },
     support: {

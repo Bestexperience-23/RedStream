@@ -32,11 +32,16 @@
               mono: ['JetBrains Mono', 'monospace'],
               display: ['Russo One', 'sans-serif'],
             },
+            backgroundSize: {
+              '200%': '200% auto',
+            },
             animation: {
               'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
               'float': 'float 6s ease-in-out infinite',
               'marquee': 'marquee 30s linear infinite',
               'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'text-shimmer': 'text-shimmer 2.5s linear infinite',
+              'spin-slow': 'spin 3s linear infinite',
             },
             keyframes: {
               float: {
@@ -50,6 +55,10 @@
               fadeInUp: {
                 '0%': { opacity: '0', transform: 'translateY(20px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'text-shimmer': {
+                '0%': { backgroundPosition: '0% center' },
+                '100%': { backgroundPosition: '-200% center' },
               }
             }
           }
@@ -81,6 +90,92 @@
       .clip-path-slant {
         clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
       }
+
+      /* LUXURY ENGINEERING BUTTONS */
+      .btn-tech {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        isolation: isolate;
+      }
+
+      /* Reflet lumineux (Sheen) */
+      .btn-tech::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -150%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg, 
+          transparent, 
+          rgba(255, 255, 255, 0.2), 
+          transparent
+        );
+        transform: skewX(-20deg);
+        transition: left 0.5s ease;
+        z-index: 1;
+      }
+
+      .btn-tech:hover::after {
+        left: 150%;
+        transition: left 0.7s ease-in-out;
+      }
+
+      /* Expansion du texte (Engineering feel) */
+      .btn-tech:hover {
+        letter-spacing: 0.05em;
+        transform: translateY(-2px);
+      }
+
+      /* Red Primary Button Style */
+      .btn-tech-red {
+        background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(220, 38, 38, 0.5);
+      }
+      .btn-tech-red:hover {
+        background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        box-shadow: 0 8px 30px rgba(220, 38, 38, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        border-color: #ef4444;
+      }
+
+      /* Dark Secondary Button Style */
+      .btn-tech-dark {
+        background: rgba(23, 23, 23, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      }
+      .btn-tech-dark:hover {
+        background: rgba(38, 38, 38, 1);
+        border-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+        color: white;
+      }
+
+      /* White Button Style */
+      .btn-tech-white {
+        background: white;
+        color: black;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+      }
+      .btn-tech-white:hover {
+        background: #f5f5f5;
+        box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
+      }
+      
+      /* WhatsApp Button Special */
+      .btn-tech-whatsapp {
+        background: #25D366;
+        box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      }
+      .btn-tech-whatsapp:hover {
+        background: #20bd5a;
+        box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+      }
+
     </style>
   <script type="importmap">
 {

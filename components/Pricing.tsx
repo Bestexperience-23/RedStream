@@ -25,22 +25,22 @@ const Pricing: React.FC<Props> = ({ content }) => {
           {content.plans.map((plan, idx) => (
             <div 
               key={idx} 
-              className={`relative flex flex-col p-8 rounded-2xl border transition-all duration-300 ${
+              className={`relative flex flex-col p-8 rounded-2xl border transition-all duration-500 ${
                 plan.recommended 
-                  ? 'bg-neutral-900 border-red-600 shadow-2xl shadow-red-900/10 scale-105 z-10' 
-                  : 'bg-neutral-900/50 border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900'
+                  ? 'bg-neutral-900 border-red-600 shadow-2xl shadow-red-900/20 scale-105 z-10' 
+                  : 'bg-neutral-900/50 border-neutral-800 hover:border-neutral-700 hover:bg-neutral-900 hover:shadow-xl'
               }`}
             >
               {plan.recommended && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-xs font-bold px-4 py-1.5 rounded-full flex items-center shadow-lg">
-                  <Star size={12} className="mr-1 fill-white" /> BEST VALUE
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-full flex items-center shadow-lg tracking-widest uppercase">
+                  <Star size={10} className="mr-1 fill-white" /> BEST VALUE
                 </div>
               )}
 
               <div className="mb-8">
-                <h3 className="text-lg font-medium text-gray-400 mb-2">{plan.name}</h3>
+                <h3 className="text-sm font-bold tracking-widest text-gray-400 mb-2 uppercase">{plan.name}</h3>
                 <div className="flex items-baseline">
-                  <span className="text-4xl md:text-5xl font-bold text-white tracking-tight">{plan.price}</span>
+                  <span className="text-4xl md:text-5xl font-black text-white tracking-tighter">{plan.price}</span>
                   <span className="text-gray-500 ml-2 text-sm font-medium">/ {plan.period}</span>
                 </div>
               </div>
@@ -62,10 +62,10 @@ const Pricing: React.FC<Props> = ({ content }) => {
                 href={WHATSAPP_LINK} 
                 target="_blank" 
                 rel="noreferrer"
-                className={`w-full py-4 px-4 rounded-xl font-bold text-center transition-all text-sm tracking-wide ${
+                className={`w-full py-4 px-4 rounded-lg font-bold text-center text-sm tracking-widest uppercase btn-tech ${
                   plan.recommended 
-                    ? 'bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-600/20' 
-                    : 'bg-white text-black hover:bg-gray-100'
+                    ? 'btn-tech-red text-white' 
+                    : 'btn-tech-white'
                 }`}
               >
                 {plan.button}

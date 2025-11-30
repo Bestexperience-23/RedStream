@@ -1,65 +1,56 @@
 import React, { useEffect, useState } from 'react';
-import { Play } from 'lucide-react';
+import { Terminal } from 'lucide-react';
 
 interface Props {
   onComplete: () => void;
 }
 
 const Intro: React.FC<Props> = ({ onComplete }) => {
-  const [progress, setProgress] = useState(0);
-  
+  const [phase, setPhase] = useState(1); // 1: Pulse, 2: Reveal Text, 3: Exit
+
   useEffect(() => {
-    const startTime = Date.now();
-    const duration = 2000; // Faster, smoother load
-
-    const animFrame = requestAnimationFrame(function animate() {
-      const now = Date.now();
-      const elapsed = now - startTime;
-      const p = Math.min(elapsed / duration, 1);
-      
-      // Easing function for smooth progress
-      const easeOutQuart = 1 - Math.pow(1 - p, 4);
-      
-      setProgress(easeOutQuart * 100);
-
-      if (p < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        setTimeout(onComplete, 500);
-      }
-    });
+    // Phase 1: Logo Pulse (Heartbeat)
+    const timer1 = setTimeout(() => setPhase(2), 1200);
+    
+    // Phase 2: Full Logo Reveal
+    const timer2 = setTimeout(() => setPhase(3), 2200);
+    
+    // Phase 3: Exit
+    const timer3 = setTimeout(onComplete, 2800);
 
     return () => {
-        cancelAnimationFrame(animFrame);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      clearTimeout(timer3);
     };
   }, [onComplete]);
 
   return (
-    <div className="fixed inset-0 bg-neutral-950 z-[100] flex flex-col items-center justify-center overflow-hidden">
+    <div className={`fixed inset-0 z-[100] bg-neutral-950 flex flex-col items-center justify-center transition-opacity duration-700 ${phase === 3 ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
       
-      {/* Center Logo */}
-      <div className="relative mb-12 flex items-center justify-center">
-        <div className="w-16 h-16 md:w-20 md:h-20 bg-red-600 rounded-xl flex items-center justify-center shadow-[0_0_40px_rgba(220,38,38,0.4)] mb-6 animate-float">
-            <Play className="text-white w-8 h-8 md:w-10 md:h-10 fill-current" />
+      <div className="relative flex flex-col items-center">
+        {/* Animated Glow Background */}
+        <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-red-600/20 rounded-full blur-[80px] transition-all duration-1000 ${phase === 1 ? 'scale-50 opacity-50' : 'scale-150 opacity-80'}`}></div>
+
+        {/* Logo Icon */}
+        <div className={`relative z-10 w-24 h-24 bg-black border-2 border-red-600 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(220,38,38,0.5)] transition-all duration-700 ease-out transform ${phase === 1 ? 'scale-90' : 'scale-100 rotate-0'}`}>
+            <Terminal className="text-white w-12 h-12" strokeWidth={3} />
+        </div>
+
+        {/* Text Reveal */}
+        <div className={`mt-8 overflow-hidden transition-all duration-700 ${phase >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <h1 className="text-5xl md:text-6xl font-black text-white tracking-tighter">
+            RED<span className="text-red-600">STREAM</span>
+          </h1>
+        </div>
+
+        {/* Tagline */}
+        <div className={`mt-4 overflow-hidden transition-all duration-700 delay-200 ${phase >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
+          <p className="text-gray-400 font-mono text-xs uppercase tracking-[0.3em]">
+            Premium Entertainment
+          </p>
         </div>
       </div>
-      
-      <h1 className="font-display font-bold text-4xl md:text-5xl tracking-tight text-white mb-8">
-        RED<span className="text-red-500">STREAM</span>
-      </h1>
-
-      {/* Elegant Loader Bar */}
-      <div className="w-64 h-1.5 bg-neutral-800 rounded-full overflow-hidden relative">
-        <div 
-            className="absolute top-0 left-0 h-full bg-gradient-to-r from-red-600 to-red-400 rounded-full transition-all duration-100 ease-out"
-            style={{ width: `${progress}%` }}
-        ></div>
-      </div>
-      
-      <p className="mt-4 text-neutral-500 text-xs font-medium tracking-widest uppercase">
-        Loading Experience...
-      </p>
-
     </div>
   );
 };
