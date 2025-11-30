@@ -7,19 +7,19 @@ interface Props {
 }
 
 const ContentShowcase: React.FC<Props> = ({ content }) => {
-  // Using high quality abstract/cinematic placeholders to represent latest content
+  // Updated Real Official Posters from TMDB (Reliable High-Res Links)
   const movies = [
-    { id: 1, title: "Cyber Action", img: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?q=80&w=800&auto=format&fit=crop", type: "4K HDR" },
-    { id: 2, title: "Speed Racing", img: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?q=80&w=800&auto=format&fit=crop", type: "LIVE" },
-    { id: 3, title: "Dark World", img: "https://images.unsplash.com/photo-1517604931442-71053e6e2619?q=80&w=800&auto=format&fit=crop", type: "FHD" },
-    { id: 4, title: "Future City", img: "https://images.unsplash.com/photo-1535016120720-40c6874c3b1c?q=80&w=800&auto=format&fit=crop", type: "4K" },
+    { id: 1, title: "Dune: Part Two", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg", type: "4K HDR" },
+    { id: 2, title: "Avatar: Way of Water", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg", type: "IMAX 3D" },
+    { id: 3, title: "John Wick: Chapter 4", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gh2bmprLtUQ8oXCSluzfQAcY0co.jpg", type: "ACTION" },
+    { id: 4, title: "Oppenheimer", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg", type: "DRAMA" },
   ];
 
   const series = [
-    { id: 5, title: "The Stadium", img: "https://images.unsplash.com/photo-1596727147705-54a9d6ed27e6?q=80&w=800&auto=format&fit=crop", type: "S4 EP5" },
-    { id: 6, title: "Retro Vibes", img: "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?q=80&w=800&auto=format&fit=crop", type: "New Season" },
-    { id: 7, title: "Cinema Life", img: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=800&auto=format&fit=crop", type: "Trending" },
-    { id: 8, title: "Wild Nature", img: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=800&auto=format&fit=crop", type: "Docu" },
+    { id: 5, title: "House of the Dragon", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7QMsOTMUswlwxJP0rTTZferzVVc.jpg", type: "S2 EP1" },
+    { id: 6, title: "The Last of Us", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/u3bZgnGQ9T01sWNhyve4z0wH0Hl.jpg", type: "HBO MAX" },
+    { id: 7, title: "Stranger Things 5", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/49WJfeN0moxb9IPfGn8AIqMGskD.jpg", type: "NETFLIX" },
+    { id: 8, title: "Peaky Blinders", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg", type: "COMPLETE" },
   ];
 
   return (
@@ -43,20 +43,25 @@ const ContentShowcase: React.FC<Props> = ({ content }) => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {movies.map((item) => (
-              <div key={item.id} className="group relative aspect-[2/3] md:aspect-video rounded-lg overflow-hidden cursor-pointer shadow-lg shadow-black/50">
+              <div key={item.id} className="group relative aspect-[2/3] rounded-xl overflow-hidden cursor-pointer shadow-lg shadow-black/50 border border-neutral-800 hover:border-red-600/50 transition-colors">
                 <img 
                   src={item.img} 
                   alt={item.title} 
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 brightness-75 group-hover:brightness-100"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                  loading="lazy"
                 />
-                <div className="absolute top-2 right-2 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-sm">
+                <div className="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">
                   {item.type}
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
-                <div className="absolute bottom-0 left-0 p-4 w-full">
-                  <h4 className="text-white font-bold truncate mb-1">{item.title}</h4>
-                  <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
-                    <Play size={14} className="fill-white text-white" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90"></div>
+                
+                <div className="absolute bottom-0 left-0 p-4 w-full translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <h4 className="text-white font-bold text-lg mb-1 leading-tight drop-shadow-md">{item.title}</h4>
+                  <div className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+                     <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center">
+                        <Play size={14} className="fill-white text-white ml-0.5" />
+                     </div>
+                     <span className="text-xs font-medium text-gray-300">Watch Now</span>
                   </div>
                 </div>
               </div>
@@ -72,20 +77,25 @@ const ContentShowcase: React.FC<Props> = ({ content }) => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {series.map((item) => (
-              <div key={item.id} className="group relative aspect-[2/3] md:aspect-video rounded-lg overflow-hidden cursor-pointer shadow-lg shadow-black/50">
+              <div key={item.id} className="group relative aspect-[2/3] rounded-xl overflow-hidden cursor-pointer shadow-lg shadow-black/50 border border-neutral-800 hover:border-red-600/50 transition-colors">
                 <img 
                   src={item.img} 
                   alt={item.title} 
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 brightness-75 group-hover:brightness-100"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                  loading="lazy"
                 />
-                 <div className="absolute top-2 right-2 bg-white text-black text-[10px] font-bold px-2 py-0.5 rounded-sm">
+                 <div className="absolute top-3 right-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">
                   {item.type}
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
-                <div className="absolute bottom-0 left-0 p-4 w-full">
-                  <h4 className="text-white font-bold truncate mb-1">{item.title}</h4>
-                  <div className="w-8 h-8 rounded-full bg-red-600 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">
-                    <Play size={14} className="fill-white text-white" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90"></div>
+                
+                <div className="absolute bottom-0 left-0 p-4 w-full translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  <h4 className="text-white font-bold text-lg mb-1 leading-tight drop-shadow-md">{item.title}</h4>
+                   <div className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-75">
+                     <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                        <Play size={14} className="fill-black text-black ml-0.5" />
+                     </div>
+                     <span className="text-xs font-medium text-gray-300">Stream</span>
                   </div>
                 </div>
               </div>
