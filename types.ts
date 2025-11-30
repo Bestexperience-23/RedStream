@@ -7,10 +7,16 @@ export enum Language {
 }
 
 export interface Content {
+  seo: {
+    title: string;
+    description: string;
+    keywords: string;
+  };
   nav: {
     home: string;
     features: string;
     pricing: string;
+    faq: string;
     contact: string;
     tryNow: string;
   };
@@ -23,6 +29,12 @@ export interface Content {
   };
   partners: {
     title: string;
+  };
+  showcase: {
+    title: string;
+    subtitle: string;
+    category_movies: string;
+    category_series: string;
   };
   features: {
     title: string;
@@ -41,6 +53,13 @@ export interface Content {
       features: string[];
       button: string;
       recommended?: boolean;
+    }[];
+  };
+  faq: {
+    title: string;
+    items: {
+      question: string;
+      answer: string;
     }[];
   };
   support: {

@@ -24,6 +24,7 @@ const Navbar: React.FC<Props> = ({ lang, content, onLanguageChange }) => {
     { name: content.home, href: "#hero" },
     { name: content.features, href: "#features" },
     { name: content.pricing, href: "#pricing" },
+    { name: content.faq, href: "#faq" },
     { name: content.contact, href: "#support" },
   ];
 

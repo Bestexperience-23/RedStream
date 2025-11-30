@@ -8,10 +8,16 @@ export const FEATURES_ICONS = [Monitor, Zap, ShieldCheck, Globe, Smartphone, Hea
 
 export const TRANSLATIONS: Record<Language, Content> = {
   [Language.EN]: {
+    seo: {
+      title: "RedStream IPTV | Best 4K IPTV Service 2024 - Anti-Freeze",
+      description: "Get the best IPTV service with 15,000+ Channels, Movies & Series in 4K/8K. Buffer-free, 24/7 Support, Compatible with all devices. Try it now!",
+      keywords: "IPTV, Premium IPTV, 4K Streaming, Live TV, Sports Streaming, Anti-Freeze IPTV, Best IPTV UK, Best IPTV USA"
+    },
     nav: {
       home: "Home",
       features: "Features",
       pricing: "Pricing",
+      faq: "FAQ",
       contact: "Contact",
       tryNow: "Try Free Trial"
     },
@@ -24,6 +30,12 @@ export const TRANSLATIONS: Record<Language, Content> = {
     },
     partners: {
       title: "AVAILABLE CONTENT & PARTNERS"
+    },
+    showcase: {
+      title: "LATEST RELEASES",
+      subtitle: "Unlimited Access to 50,000+ Movies & Series VOD",
+      category_movies: "New Movies",
+      category_series: "Trending Series"
     },
     features: {
       title: "Why Choose RedStream?",
@@ -64,6 +76,15 @@ export const TRANSLATIONS: Record<Language, Content> = {
         }
       ]
     },
+    faq: {
+      title: "Frequently Asked Questions",
+      items: [
+        { question: "How fast is the delivery?", answer: "Delivery is instant. You will receive your credentials via WhatsApp or Email immediately after payment." },
+        { question: "Does it work on my device?", answer: "Yes! We support Smart TVs (Samsung, LG), Android Box, Firestick, Apple TV, Mag, PC, and Mobile." },
+        { question: "Do I need a VPN?", answer: "No, our service is secure and does not require a VPN. However, you can use one if you prefer." },
+        { question: "What internet speed do I need?", answer: "We recommend at least 12 Mbps for 4K streaming and 8 Mbps for HD channels." }
+      ]
+    },
     support: {
       title: "Need Assistance?",
       desc: "Our team is available 24/7 on WhatsApp to assist you with installation and activation.",
@@ -76,10 +97,16 @@ export const TRANSLATIONS: Record<Language, Content> = {
     }
   },
   [Language.FR]: {
+    seo: {
+      title: "RedStream IPTV | Meilleur IPTV 4K France - Anti-Coupure",
+      description: "Profitez du meilleur service IPTV en France. +15 000 Chaînes, Films et Séries en 4K/8K. Sans coupure, Support 24/7, Compatible tous appareils.",
+      keywords: "IPTV France, Abonnement IPTV, Streaming 4K, IPTV Pas Cher, Meilleur IPTV 2024, Chaines Sport, VOD Illimité"
+    },
     nav: {
       home: "Accueil",
       features: "Avantages",
       pricing: "Tarifs",
+      faq: "FAQ",
       contact: "Contact",
       tryNow: "Essai Gratuit"
     },
@@ -92,6 +119,12 @@ export const TRANSLATIONS: Record<Language, Content> = {
     },
     partners: {
       title: "CONTENU DISPONIBLE & PARTENAIRES"
+    },
+    showcase: {
+      title: "DERNIÈRES NOUVEAUTÉS",
+      subtitle: "Accès illimité à +50 000 Films & Séries VOD",
+      category_movies: "Films Récents",
+      category_series: "Séries Tendances"
     },
     features: {
       title: "Pourquoi Choisir RedStream ?",
@@ -132,6 +165,15 @@ export const TRANSLATIONS: Record<Language, Content> = {
         }
       ]
     },
+    faq: {
+      title: "Questions Fréquentes",
+      items: [
+        { question: "Quelle est la vitesse de livraison ?", answer: "La livraison est immédiate. Vous recevez vos identifiants par WhatsApp ou Email juste après le paiement." },
+        { question: "Est-ce compatible avec mon appareil ?", answer: "Oui ! Nous supportons Smart TV (Samsung, LG), Android Box, Firestick, Apple TV, Mag, PC et Mobile." },
+        { question: "Ai-je besoin d'un VPN ?", answer: "Non, notre service est sécurisé et ne nécessite pas de VPN. Cependant, vous pouvez en utiliser un si vous le souhaitez." },
+        { question: "Quelle vitesse internet est requise ?", answer: "Nous recommandons au moins 12 Mbps pour la 4K et 8 Mbps pour la HD." }
+      ]
+    },
     support: {
       title: "Besoin d'aide ?",
       desc: "Notre équipe est disponible 24/7 sur WhatsApp pour vous aider à l'installation.",
@@ -144,10 +186,16 @@ export const TRANSLATIONS: Record<Language, Content> = {
     }
   },
   [Language.IT]: {
+    seo: {
+      title: "RedStream IPTV | Miglior IPTV Italia 4K - Stabile",
+      description: "Scopri il miglior servizio IPTV in Italia. Canali Sky, DAZN, Film e Serie in 4K. Nessun blocco, Assistenza 24/7. Prova ora!",
+      keywords: "IPTV Italia, Abbonamento IPTV, Streaming Calcio, Sky Gratis, IPTV Stabile, Miglior IPTV, VOD"
+    },
     nav: {
       home: "Home",
       features: "Caratteristiche",
       pricing: "Prezzi",
+      faq: "FAQ",
       contact: "Contatto",
       tryNow: "Prova Ora"
     },
@@ -161,10 +209,16 @@ export const TRANSLATIONS: Record<Language, Content> = {
     partners: {
       title: "CONTENUTI DISPONIBILI & PARTNER"
     },
+    showcase: {
+      title: "ULTIME USCITE",
+      subtitle: "Accesso illimitato a +50.000 Film e Serie VOD",
+      category_movies: "Film Recenti",
+      category_series: "Serie di Tendenza"
+    },
     features: {
       title: "Perché Scegliere RedStream?",
       items: [
-        { title: "4K & 8K Ultra HD", desc: "Qualità dell'immagine cristallina." },
+        { title: "4K & 8K Ultra HD", desc: "Qualità dell'immagine cristalline." },
         { title: "Tecnologia Anti-Freeze", desc: "Visione ininterrotta senza buffering." },
         { title: "Sicuro e Privato", desc: "Crittografia end-to-end. 100% Anonimo." },
         { title: "15,000+ Canali", desc: "Copertura mondiale: IT, DE, UK, US, e altro." },
@@ -200,6 +254,15 @@ export const TRANSLATIONS: Record<Language, Content> = {
         }
       ]
     },
+    faq: {
+      title: "Domande Frequenti",
+      items: [
+        { question: "Quanto è veloce la consegna?", answer: "La consegna è immediata. Riceverai le credenziali via WhatsApp o Email subito dopo il pagamento." },
+        { question: "Funziona sul mio dispositivo?", answer: "Sì! Supportiamo Smart TV, Android Box, Firestick, Apple TV, Mag, PC e Smartphone." },
+        { question: "Serve una VPN?", answer: "No, il servizio è sicuro e non richiede VPN. Tuttavia puoi usarne una se preferisci." },
+        { question: "Che velocità internet serve?", answer: "Raccomandiamo almeno 12 Mbps per il 4K e 8 Mbps per l'HD." }
+      ]
+    },
     support: {
       title: "Hai bisogno di assistenza?",
       desc: "Il nostro team è disponibile 24/7 su WhatsApp.",
@@ -212,10 +275,16 @@ export const TRANSLATIONS: Record<Language, Content> = {
     }
   },
   [Language.ES]: {
+    seo: {
+      title: "RedStream IPTV | Mejor IPTV España y Latino 4K",
+      description: "El mejor servicio IPTV en español. +15,000 Canales, Películas y Series. Sin cortes, Soporte 24/7. Compatible con Smart TV y Android.",
+      keywords: "IPTV España, IPTV Latino, Canales Futbol, Streaming 4K, Listas M3U, Mejor IPTV, Sin Cortes"
+    },
     nav: {
       home: "Inicio",
       features: "Características",
       pricing: "Precios",
+      faq: "FAQ",
       contact: "Contacto",
       tryNow: "Prueba Gratis"
     },
@@ -228,6 +297,12 @@ export const TRANSLATIONS: Record<Language, Content> = {
     },
     partners: {
       title: "CONTENIDO DISPONIBLE Y SOCIOS"
+    },
+    showcase: {
+      title: "ÚLTIMOS LANZAMIENTOS",
+      subtitle: "Acceso ilimitado a +50,000 Películas y Series VOD",
+      category_movies: "Películas Nuevas",
+      category_series: "Series en Tendencia"
     },
     features: {
       title: "¿Por qué elegir RedStream?",
@@ -268,6 +343,15 @@ export const TRANSLATIONS: Record<Language, Content> = {
         }
       ]
     },
+    faq: {
+      title: "Preguntas Frecuentes",
+      items: [
+        { question: "¿Qué tan rápida es la entrega?", answer: "La entrega es inmediata. Recibirás tus credenciales por WhatsApp o Email justo después del pago." },
+        { question: "¿Funciona en mi dispositivo?", answer: "¡Sí! Soportamos Smart TV, Android Box, Firestick, Apple TV, Mag, PC y Móvil." },
+        { question: "¿Necesito una VPN?", answer: "No, nuestro servicio es seguro y no requiere VPN. Sin embargo, puedes usar una si prefieres." },
+        { question: "¿Qué velocidad de internet necesito?", answer: "Recomendamos al menos 12 Mbps para 4K y 8 Mbps para HD." }
+      ]
+    },
     support: {
       title: "¿Necesitas ayuda?",
       desc: "Nuestro equipo está disponible 24/7 en WhatsApp.",
@@ -280,10 +364,16 @@ export const TRANSLATIONS: Record<Language, Content> = {
     }
   },
   [Language.AR]: {
+    seo: {
+      title: "RedStream IPTV | أفضل اشتراك IPTV بدون تقطيع 4K",
+      description: "أفضل خدمة IPTV في العالم العربي. +15,000 قناة رياضية وترفيهية. جودة 4K حقيقية، بدون تقطيع، دعم فني 24/7. جرب الآن!",
+      keywords: "اشتراك IPTV, IPTV 2024, قنوات رياضية, بي ان سبورت, شاهد VIP, افضل اشتراك, بدون تقطيع"
+    },
     nav: {
       home: "الرئيسية",
       features: "المميزات",
       pricing: "الأسعار",
+      faq: "أسئلة شائعة",
       contact: "اتصل بنا",
       tryNow: "جرب الآن"
     },
@@ -296,6 +386,12 @@ export const TRANSLATIONS: Record<Language, Content> = {
     },
     partners: {
       title: "المحتوى المتاح والشركاء"
+    },
+    showcase: {
+      title: "أحدث الإصدارات",
+      subtitle: "وصول غير محدود لأكثر من 50,000 فيلم ومسلسل",
+      category_movies: "أحدث الأفلام",
+      category_series: "مسلسلات رائجة"
     },
     features: {
       title: "لماذا تختار RedStream؟",
@@ -334,6 +430,15 @@ export const TRANSLATIONS: Record<Language, Content> = {
           features: ["3 اتصالات", "جودة 4K/FHD/HD", "تقنية منع التجميد", "دعم VIP", "مكتبة شاملة"],
           button: "اطلب الآن"
         }
+      ]
+    },
+    faq: {
+      title: "الأسئلة الشائعة",
+      items: [
+        { question: "ما سرعة التسليم؟", answer: "التسليم فوري. ستتلقى بيانات الاشتراك عبر واتساب أو البريد الإلكتروني فور الدفع." },
+        { question: "هل يعمل على جهازي؟", answer: "نعم! ندعم جميع الأجهزة الذكية، أندرويد بوكس، الهواتف، والحواسيب." },
+        { question: "هل أحتاج إلى VPN؟", answer: "لا، خدمتنا آمنة ولا تتطلب VPN. لكن يمكنك استخدامه إذا رغبت." },
+        { question: "ما هي سرعة الإنترنت المطلوبة؟", answer: "نوصي بسرعة 12 ميجابايت على الأقل لجودة 4K و 8 ميجابايت لجودة HD." }
       ]
     },
     support: {

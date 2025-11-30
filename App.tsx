@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Partners from './components/Partners';
+import ContentShowcase from './components/ContentShowcase';
 import Features from './components/Features';
 import Pricing from './components/Pricing';
+import FAQ from './components/FAQ';
 import Support from './components/Support';
 import Footer from './components/Footer';
 import WhatsAppBtn from './components/WhatsAppBtn';
@@ -24,9 +26,28 @@ function App() {
       document.dir = 'ltr';
     }
 
-    // Update document title for better SEO
-    document.title = `RedStream IPTV | ${lang === Language.AR ? 'أفضل خدمة IPTV' : 'Premium IPTV Service'}`;
-  }, [lang]);
+    // Dynamic SEO Updates
+    document.title = content.seo.title;
+
+    // Update Meta Description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.setAttribute('name', 'description');
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.setAttribute('content', content.seo.description);
+
+    // Update Meta Keywords (Create if doesn't exist)
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', content.seo.keywords);
+
+  }, [lang, content]);
 
   return (
     <>
@@ -47,8 +68,10 @@ function App() {
           <main>
             <Hero content={content.hero} />
             <Partners content={content.partners} />
+            <ContentShowcase content={content.showcase} />
             <Features content={content.features} />
             <Pricing content={content.pricing} />
+            <FAQ content={content.faq} />
             <Support content={content.support} />
           </main>
           <Footer content={content.footer} />
