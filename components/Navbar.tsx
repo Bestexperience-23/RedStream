@@ -60,7 +60,11 @@ const Navbar: React.FC<Props> = ({ lang, content, onLanguageChange }) => {
               href={createWhatsAppLink("Hello RedStream, I would like to request a Free Trial.")}
               target="_blank" 
               rel="noreferrer"
+<<<<<<< HEAD
               className="btn-tech btn-tech-red text-white text-xs font-bold py-2.5 px-6 rounded-lg"
+=======
+              className="btn-tech btn-tech-red text-white text-xs font-bold py-2.5 px-6 rounded-sm"
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
             >
               {content.tryNow}
             </a>
@@ -96,7 +100,11 @@ const Navbar: React.FC<Props> = ({ lang, content, onLanguageChange }) => {
             href={createWhatsAppLink("Hello RedStream, I would like to request a Free Trial.")}
             target="_blank" 
             rel="noreferrer" 
+<<<<<<< HEAD
             className="block text-center btn-tech btn-tech-red text-white py-3 rounded-lg font-bold"
+=======
+            className="block text-center btn-tech btn-tech-red text-white py-3 rounded-sm font-bold"
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
           >
             {content.tryNow}
           </a>

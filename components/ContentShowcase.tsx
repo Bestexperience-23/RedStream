@@ -7,6 +7,7 @@ interface Props {
 }
 
 const ContentShowcase: React.FC<Props> = ({ content }) => {
+<<<<<<< HEAD
   // Updated with High-Quality Thematic Images (Copyright Free / Reliable) where needed
   const movies = [
     { id: 1, title: "Dune: Part Two", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg?v=2", type: "4K HDR" },
@@ -32,6 +33,21 @@ const ContentShowcase: React.FC<Props> = ({ content }) => {
     },
     { id: 7, title: "Stranger Things 5", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/49WJfeN0moxb9IPfGn8AIqMGskD.jpg?v=2", type: "NETFLIX" },
     { id: 8, title: "Peaky Blinders", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg?v=2", type: "COMPLETE" },
+=======
+  // Updated Real Official Posters from TMDB (Reliable High-Res Links)
+  const movies = [
+    { id: 1, title: "Dune: Part Two", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg", type: "4K HDR" },
+    { id: 2, title: "Avatar: Way of Water", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg", type: "IMAX 3D" },
+    { id: 3, title: "John Wick: Chapter 4", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gh2bmprLtUQ8oXCSluzfQAcY0co.jpg", type: "ACTION" },
+    { id: 4, title: "Oppenheimer", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg", type: "DRAMA" },
+  ];
+
+  const series = [
+    { id: 5, title: "House of the Dragon", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/7QMsOTMUswlwxJP0rTTZferzVVc.jpg", type: "S2 EP1" },
+    { id: 6, title: "The Last of Us", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/u3bZgnGQ9T01sWNhyve4z0wH0Hl.jpg", type: "HBO MAX" },
+    { id: 7, title: "Stranger Things 5", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/49WJfeN0moxb9IPfGn8AIqMGskD.jpg", type: "NETFLIX" },
+    { id: 8, title: "Peaky Blinders", img: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg", type: "COMPLETE" },
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
   ];
 
   return (
@@ -55,12 +71,17 @@ const ContentShowcase: React.FC<Props> = ({ content }) => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {movies.map((item) => (
+<<<<<<< HEAD
               <div key={item.id} className="group relative aspect-[2/3] rounded-xl overflow-hidden cursor-pointer shadow-lg shadow-black/50 border border-neutral-800 bg-neutral-800 hover:border-red-600/50 transition-colors">
+=======
+              <div key={item.id} className="group relative aspect-[2/3] rounded-xl overflow-hidden cursor-pointer shadow-lg shadow-black/50 border border-neutral-800 hover:border-red-600/50 transition-colors">
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
                 <img 
                   src={item.img} 
                   alt={item.title} 
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                   loading="lazy"
+<<<<<<< HEAD
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     // Fallback if image fails
@@ -68,6 +89,8 @@ const ContentShowcase: React.FC<Props> = ({ content }) => {
                     (e.target as HTMLImageElement).parentElement!.classList.add('flex', 'items-center', 'justify-center');
                     (e.target as HTMLImageElement).parentElement!.innerHTML = `<span class="text-gray-500 text-xs font-bold text-center p-2">${item.title}</span>`;
                   }}
+=======
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
                 />
                 <div className="absolute top-3 right-3 bg-red-600 text-white text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">
                   {item.type}
@@ -80,7 +103,11 @@ const ContentShowcase: React.FC<Props> = ({ content }) => {
                      <div className="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center">
                         <Play size={14} className="fill-white text-white ml-0.5" />
                      </div>
+<<<<<<< HEAD
                      <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">{content.included_badge}</span>
+=======
+                     <span className="text-xs font-medium text-gray-300">Watch Now</span>
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
                   </div>
                 </div>
               </div>
@@ -96,12 +123,17 @@ const ContentShowcase: React.FC<Props> = ({ content }) => {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {series.map((item) => (
+<<<<<<< HEAD
               <div key={item.id} className="group relative aspect-[2/3] rounded-xl overflow-hidden cursor-pointer shadow-lg shadow-black/50 border border-neutral-800 bg-neutral-800 hover:border-red-600/50 transition-colors">
+=======
+              <div key={item.id} className="group relative aspect-[2/3] rounded-xl overflow-hidden cursor-pointer shadow-lg shadow-black/50 border border-neutral-800 hover:border-red-600/50 transition-colors">
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
                 <img 
                   src={item.img} 
                   alt={item.title} 
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                   loading="lazy"
+<<<<<<< HEAD
                   referrerPolicy="no-referrer"
                    onError={(e) => {
                     // Fallback if image fails
@@ -109,6 +141,8 @@ const ContentShowcase: React.FC<Props> = ({ content }) => {
                     (e.target as HTMLImageElement).parentElement!.classList.add('flex', 'items-center', 'justify-center');
                     (e.target as HTMLImageElement).parentElement!.innerHTML = `<span class="text-gray-500 text-xs font-bold text-center p-2">${item.title}</span>`;
                   }}
+=======
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
                 />
                  <div className="absolute top-3 right-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">
                   {item.type}
@@ -121,7 +155,11 @@ const ContentShowcase: React.FC<Props> = ({ content }) => {
                      <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
                         <Play size={14} className="fill-black text-black ml-0.5" />
                      </div>
+<<<<<<< HEAD
                      <span className="text-xs font-bold text-gray-300 uppercase tracking-wider">{content.included_badge}</span>
+=======
+                     <span className="text-xs font-medium text-gray-300">Stream</span>
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
                   </div>
                 </div>
               </div>

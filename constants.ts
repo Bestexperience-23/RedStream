@@ -65,6 +65,7 @@ export const TRANSLATIONS: Record<Language, Content> = {
       paymentTitle: "ACCEPTED PAYMENT METHODS",
       plans: [
         {
+<<<<<<< HEAD
           name: "Monthly Pass",
           price: "€12",
           period: "1 Month",
@@ -83,6 +84,26 @@ export const TRANSLATIONS: Record<Language, Content> = {
           price: "€49",
           period: "12 Months",
           features: ["1 Device", "4K/8K Ultra HD", "Live TV + VOD", "Anti-Freeze Technology", "VIP Priority Support"],
+=======
+          name: "Starter",
+          price: "€12",
+          period: "1 Month",
+          features: ["1 Device", "4K/FHD/HD Quality", "Anti-Freeze Technology", "24/7 Support", "Full VOD Library"],
+          button: "Order Now"
+        },
+        {
+          name: "Eco Year",
+          price: "€29",
+          period: "12 Months",
+          features: ["1 Device", "FHD/HD Quality", "Live TV Only (No VOD)", "Standard Support", "Stable Connection"],
+          button: "Order Now"
+        },
+        {
+          name: "Elite Year",
+          price: "€49",
+          period: "12 Months",
+          features: ["3 Devices", "4K/8K Ultra HD", "Live TV + VOD (Movies)", "VIP Priority Support", "Anti-Freeze Max"],
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
           button: "Order Now",
           recommended: true
         }
@@ -91,10 +112,17 @@ export const TRANSLATIONS: Record<Language, Content> = {
     faq: {
       title: "Frequently Asked Questions",
       items: [
+<<<<<<< HEAD
         { question: "What channels are included?", answer: "We provide over 15,000 live channels from around the world, including Sports, News, Movies, and Kids channels in 4K/FHD quality." },
         { question: "How fast is the delivery?", answer: "Delivery is instant. You will receive your credentials via WhatsApp or Email immediately after payment." },
         { question: "Does it work on my device?", answer: "Yes! We support Smart TVs (Samsung, LG), Android Box, Firestick, Apple TV, Mag, PC, and Mobile." },
         { question: "Do I need a VPN?", answer: "No, our service is secure. However, we can activate a VPN remotely on your account upon request." }
+=======
+        { question: "What is the difference between Eco and Elite?", answer: "The Eco plan (€29) offers Live TV only in FHD. The Elite plan (€49) includes 4K quality, VOD (Movies & Series), and supports up to 3 devices." },
+        { question: "How fast is the delivery?", answer: "Delivery is instant. You will receive your credentials via WhatsApp or Email immediately after payment." },
+        { question: "Does it work on my device?", answer: "Yes! We support Smart TVs (Samsung, LG), Android Box, Firestick, Apple TV, Mag, PC, and Mobile." },
+        { question: "Do I need a VPN?", answer: "No, our service is secure and does not require a VPN. However, you can use one if you prefer." }
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
       ]
     },
     support: {
@@ -160,6 +188,7 @@ export const TRANSLATIONS: Record<Language, Content> = {
       paymentTitle: "MÉTHODES DE PAIEMENT",
       plans: [
         {
+<<<<<<< HEAD
           name: "Pass Mensuel",
           price: "12€",
           period: "1 Mois",
@@ -178,6 +207,26 @@ export const TRANSLATIONS: Record<Language, Content> = {
           price: "49€",
           period: "12 Mois",
           features: ["1 Appareil", "Qualité 4K/8K UHD", "TV Direct + VOD", "Anti-Freeze Max", "Support Prioritaire"],
+=======
+          name: "Starter",
+          price: "12€",
+          period: "1 Mois",
+          features: ["1 Appareil", "Qualité 4K/FHD", "Anti-Freeze", "Support 24/7", "VOD Incluse"],
+          button: "Commander"
+        },
+        {
+          name: "Éco Annuel",
+          price: "29€",
+          period: "12 Mois",
+          features: ["1 Appareil", "Qualité FHD/HD", "TV Direct (Pas de VOD)", "Support Standard", "Connexion Stable"],
+          button: "Commander"
+        },
+        {
+          name: "Élite Annuel",
+          price: "49€",
+          period: "12 Mois",
+          features: ["3 Appareils", "Qualité 4K/8K UHD", "TV + VOD (Films/Séries)", "Support VIP Prioritaire", "Anti-Freeze Max"],
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
           button: "Commander",
           recommended: true
         }
@@ -186,10 +235,17 @@ export const TRANSLATIONS: Record<Language, Content> = {
     faq: {
       title: "Questions Fréquentes",
       items: [
+<<<<<<< HEAD
         { question: "Quelles sont les chaînes incluses ?", answer: "Nous proposons plus de 15 000 chaînes en direct du monde entier, incluant Sports, Cinéma, Enfants, Documentaires en 4K/FHD." },
         { question: "Quelle est la vitesse de livraison ?", answer: "La livraison est immédiate. Vous recevez vos identifiants par WhatsApp ou Email juste après le paiement." },
         { question: "Est-ce compatible avec mon appareil ?", answer: "Oui ! Nous supportons Smart TV (Samsung, LG), Android Box, Firestick, Apple TV, Mag, PC et Mobile." },
         { question: "Ai-je besoin d'un VPN ?", answer: "Non, notre service est sécurisé. Nous pouvons activer un VPN à distance sur votre compte sur simple demande." }
+=======
+        { question: "Quelle différence entre Éco et Élite ?", answer: "Le plan Éco (29€) offre la TV en direct en FHD sans VOD. Le plan Élite (49€) inclut la 4K, toute la VOD (Films/Séries) et 3 écrans." },
+        { question: "Quelle est la vitesse de livraison ?", answer: "La livraison est immédiate. Vous recevez vos identifiants par WhatsApp ou Email juste après le paiement." },
+        { question: "Est-ce compatible avec mon appareil ?", answer: "Oui ! Nous supportons Smart TV (Samsung, LG), Android Box, Firestick, Apple TV, Mag, PC et Mobile." },
+        { question: "Ai-je besoin d'un VPN ?", answer: "Non, notre service est sécurisé et ne nécessite pas de VPN. Cependant, vous pouvez en utiliser un si vous le souhaitez." }
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
       ]
     },
     support: {
@@ -255,6 +311,7 @@ export const TRANSLATIONS: Record<Language, Content> = {
       paymentTitle: "METODI DI PAGAMENTO",
       plans: [
         {
+<<<<<<< HEAD
           name: "Pass Mensile",
           price: "€12",
           period: "1 Mese",
@@ -273,6 +330,26 @@ export const TRANSLATIONS: Record<Language, Content> = {
           price: "€49",
           period: "12 Mesi",
           features: ["1 Dispositivo", "Qualità 4K/8K", "Live TV + VOD", "Anti-Freeze Max", "Supporto Prioritario"],
+=======
+          name: "Starter",
+          price: "€12",
+          period: "1 Mese",
+          features: ["1 Dispositivo", "Qualità 4K/FHD", "Anti-Freeze", "Supporto 24/7", "VOD Inclusi"],
+          button: "Ordina Ora"
+        },
+        {
+          name: "Eco Annuale",
+          price: "€29",
+          period: "12 Mesi",
+          features: ["1 Dispositivo", "Qualità FHD/HD", "Solo Live TV (No VOD)", "Supporto Standard", "Connessione Stabile"],
+          button: "Ordina Ora"
+        },
+        {
+          name: "Elite Annuale",
+          price: "€49",
+          period: "12 Mesi",
+          features: ["3 Dispositivi", "Qualità 4K/8K", "Live TV + VOD (Film)", "Supporto VIP", "Anti-Freeze Max"],
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
           button: "Ordina Ora",
           recommended: true
         }
@@ -281,10 +358,17 @@ export const TRANSLATIONS: Record<Language, Content> = {
     faq: {
       title: "Domande Frequenti",
       items: [
+<<<<<<< HEAD
         { question: "Quali canali sono inclusi?", answer: "Offriamo oltre 15.000 canali live da tutto il mondo, inclusi Sport, Film e Bambini in qualità 4K/FHD." },
         { question: "Quanto è veloce la consegna?", answer: "La consegna è immediata. Riceverai le credenziali via WhatsApp o Email subito dopo il pagamento." },
         { question: "Funziona sul mio dispositivo?", answer: "Sì! Supportiamo Smart TV, Android Box, Firestick, Apple TV, Mag, PC e Smartphone." },
         { question: "Serve una VPN?", answer: "No, il servizio è sicuro. Possiamo attivare una VPN da remoto sul tuo account su richiesta." }
+=======
+        { question: "Qual è la differenza tra Eco ed Elite?", answer: "Il piano Eco (€29) offre solo canali Live in FHD. Il piano Elite (€49) include 4K, VOD (Film/Serie) e 3 dispositivi." },
+        { question: "Quanto è veloce la consegna?", answer: "La consegna è immediata. Riceverai le credenziali via WhatsApp o Email subito dopo il pagamento." },
+        { question: "Funziona sul mio dispositivo?", answer: "Sì! Supportiamo Smart TV, Android Box, Firestick, Apple TV, Mag, PC e Smartphone." },
+        { question: "Serve una VPN?", answer: "No, il servizio è sicuro e non richiede VPN. Tuttavia puoi usarne una se preferisci." }
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
       ]
     },
     support: {
@@ -350,6 +434,7 @@ export const TRANSLATIONS: Record<Language, Content> = {
       paymentTitle: "MÉTODOS DE PAGO",
       plans: [
         {
+<<<<<<< HEAD
           name: "Pase Mensual",
           price: "€12",
           period: "1 Mes",
@@ -368,6 +453,26 @@ export const TRANSLATIONS: Record<Language, Content> = {
           price: "€49",
           period: "12 Meses",
           features: ["1 Dispositivo", "Calidad 4K/8K", "TV en Vivo + VOD", "Anti-Freeze Max", "Soporte Prioritario"],
+=======
+          name: "Starter",
+          price: "€12",
+          period: "1 Mes",
+          features: ["1 Dispositivo", "Calidad 4K/FHD", "Anti-Freeze", "Soporte 24/7", "Incluye VOD"],
+          button: "Pedir Ahora"
+        },
+        {
+          name: "Eco Anual",
+          price: "€29",
+          period: "12 Meses",
+          features: ["1 Dispositivo", "Calidad FHD/HD", "Solo TV en Vivo (Sin VOD)", "Soporte Estándar", "Conexión Estable"],
+          button: "Pedir Ahora"
+        },
+        {
+          name: "Élite Anual",
+          price: "€49",
+          period: "12 Meses",
+          features: ["3 Conexiones", "Calidad 4K/8K", "TV + VOD (Películas)", "Soporte VIP", "Anti-Freeze Max"],
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
           button: "Pedir Ahora",
           recommended: true
         }
@@ -376,10 +481,17 @@ export const TRANSLATIONS: Record<Language, Content> = {
     faq: {
       title: "Preguntas Frecuentes",
       items: [
+<<<<<<< HEAD
         { question: "¿Qué canales están incluidos?", answer: "Ofrecemos más de 15,000 canales en vivo de todo el mundo, incluyendo Deportes, Cine y Niños en calidad 4K/FHD." },
         { question: "¿Qué tan rápida es la entrega?", answer: "La entrega es inmediata. Recibirás tus credenciales por WhatsApp o Email justo después del pago." },
         { question: "¿Funciona en mi dispositivo?", answer: "¡Sí! Soportamos Smart TV, Android Box, Firestick, Apple TV, Mag, PC y Móvil." },
         { question: "¿Necesito una VPN?", answer: "No, nuestro servicio es seguro. Podemos activar una VPN de forma remota en su cuenta bajo petición." }
+=======
+        { question: "¿Diferencia entre Eco y Élite?", answer: "El plan Eco (€29) es solo TV en Vivo FHD. El plan Élite (€49) incluye 4K, VOD (Películas/Series) y 3 dispositivos." },
+        { question: "¿Qué tan rápida es la entrega?", answer: "La entrega es inmediata. Recibirás tus credenciales por WhatsApp o Email justo después del pago." },
+        { question: "¿Funciona en mi dispositivo?", answer: "¡Sí! Soportamos Smart TV, Android Box, Firestick, Apple TV, Mag, PC y Móvil." },
+        { question: "¿Necesito una VPN?", answer: "No, nuestro servicio es seguro y no requiere VPN. Sin embargo, puedes usar una si prefieres." }
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
       ]
     },
     support: {
@@ -445,6 +557,7 @@ export const TRANSLATIONS: Record<Language, Content> = {
       paymentTitle: "طرق الدفع المقبولة",
       plans: [
         {
+<<<<<<< HEAD
           name: "باقة شهرية",
           price: "€12",
           period: "1 شهر",
@@ -463,6 +576,26 @@ export const TRANSLATIONS: Record<Language, Content> = {
           price: "€49",
           period: "12 شهر",
           features: ["جهاز واحد", "جودة 4K/8K", "قنوات + مكتبة VOD", "أعلى ثبات (VIP)", "دعم فني ذو أولوية"],
+=======
+          name: "البداية",
+          price: "€12",
+          period: "1 شهر",
+          features: ["جهاز واحد", "جودة 4K/FHD", "تقنية منع التجميد", "دعم 24/7", "مكتبة VOD كاملة"],
+          button: "اطلب الآن"
+        },
+        {
+          name: "اقتصادي سنوي",
+          price: "€29",
+          period: "12 شهر",
+          features: ["جهاز واحد", "جودة FHD/HD", "قنوات مباشرة فقط", "بدون مكتبة أفلام", "اتصال مستقر"],
+          button: "اطلب الآن"
+        },
+        {
+          name: "النخبة سنوي",
+          price: "€49",
+          period: "12 شهر",
+          features: ["3 اتصالات", "جودة 4K/8K", "قنوات + أفلام ومسلسلات", "دعم VIP فوري", "ثبات عالي جداً"],
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
           button: "اطلب الآن",
           recommended: true
         }
@@ -471,10 +604,17 @@ export const TRANSLATIONS: Record<Language, Content> = {
     faq: {
       title: "الأسئلة الشائعة",
       items: [
+<<<<<<< HEAD
         { question: "ما هي القنوات المشمولة؟", answer: "نقدم أكثر من 15000 قناة مباشرة تشمل الرياضة والأفلام والأطفال بجودة 4K." },
         { question: "ما سرعة التسليم؟", answer: "التسليم فوري. ستتلقى بيانات الاشتراك عبر واتساب أو البريد الإلكتروني فور الدفع." },
         { question: "هل يعمل على جهازي؟", answer: "نعم! ندعم جميع الأجهزة الذكية، أندرويد بوكس، الهواتف، والحواسيب." },
         { question: "هل أحتاج إلى VPN؟", answer: "لا، خدمتنا آمنة. يمكننا تفعيل VPN عن بُعد على حسابك عند الطلب." }
+=======
+        { question: "ما الفرق بين الباقة الاقتصادية والنخبة؟", answer: "الباقة الاقتصادية (29€) تشمل قنوات مباشرة فقط بجودة FHD. باقة النخبة (49€) تشمل مكتبة الأفلام والمسلسلات وجودة 4K و3 أجهزة." },
+        { question: "ما سرعة التسليم؟", answer: "التسليم فوري. ستتلقى بيانات الاشتراك عبر واتساب أو البريد الإلكتروني فور الدفع." },
+        { question: "هل يعمل على جهازي؟", answer: "نعم! ندعم جميع الأجهزة الذكية، أندرويد بوكس، الهواتف، والحواسيب." },
+        { question: "هل أحتاج إلى VPN؟", answer: "لا، خدمتنا آمنة ولا تتطلب VPN. لكن يمكنك استخدامه إذا رغبت." }
+>>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
       ]
     },
     support: {
