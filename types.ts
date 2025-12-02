@@ -35,6 +35,7 @@ export interface Content {
     subtitle: string;
     category_movies: string;
     category_series: string;
+    included_badge: string;
   };
   features: {
     title: string;
@@ -42,6 +43,11 @@ export interface Content {
       title: string;
       desc: string;
     }[];
+  };
+  supportedDevices: {
+    title: string;
+    subtitle: string;
+    items: string[];
   };
   pricing: {
     title: string;

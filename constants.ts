@@ -2,6 +2,12 @@ import { Content, Language } from './types';
 import { Monitor, Zap, ShieldCheck, Globe, Smartphone, Headset } from 'lucide-react';
 
 export const WHATSAPP_NUMBER = "212694843943";
+
+export const createWhatsAppLink = (message: string = "") => {
+  const text = encodeURIComponent(message);
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+};
+
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 export const FEATURES_ICONS = [Monitor, Zap, ShieldCheck, Globe, Smartphone, Headset];
@@ -10,8 +16,8 @@ export const TRANSLATIONS: Record<Language, Content> = {
   [Language.EN]: {
     seo: {
       title: "RedStream IPTV | Best 4K IPTV Service 2024 - Anti-Freeze",
-      description: "Get the best IPTV service with 15,000+ Channels, Movies & Series in 4K/8K. Buffer-free, 24/7 Support, Compatible with all devices. Try it now!",
-      keywords: "IPTV, Premium IPTV, 4K Streaming, Live TV, Sports Streaming, Anti-Freeze IPTV, Best IPTV UK, Best IPTV USA"
+      description: "Get the best IPTV subscription with 15,000+ Channels, Movies & Series in 4K/8K. Compatible with Smart TV, Firestick, Android Box, Mag, Enigma. 24/7 Support.",
+      keywords: "IPTV Subscription, Best IPTV Service, 4K Streaming, IPTV Smarters Pro, M3U Playlist, Xtream Codes, Mag 254, Android TV, Firestick IPTV, Anti-Freeze, USA IPTV, UK IPTV"
     },
     nav: {
       home: "Home",
@@ -35,7 +41,8 @@ export const TRANSLATIONS: Record<Language, Content> = {
       title: "LATEST RELEASES",
       subtitle: "Unlimited Access to 50,000+ Movies & Series VOD",
       category_movies: "New Movies",
-      category_series: "Trending Series"
+      category_series: "Trending Series",
+      included_badge: "INCLUDED"
     },
     features: {
       title: "Why Choose RedStream?",
@@ -48,41 +55,46 @@ export const TRANSLATIONS: Record<Language, Content> = {
         { title: "24/7 Premium Support", desc: "Dedicated support team ready to help via WhatsApp." }
       ]
     },
+    supportedDevices: {
+      title: "Compatible Devices",
+      subtitle: "Watch your favorite content on any device, anywhere.",
+      items: ["Smart TV", "Android Box", "iOS / Apple", "Firestick", "Windows PC", "macOS"]
+    },
     pricing: {
       title: "Subscription Plans",
       paymentTitle: "ACCEPTED PAYMENT METHODS",
       plans: [
         {
-          name: "Starter",
-          price: "€15",
+          name: "Monthly Pass",
+          price: "€12",
           period: "1 Month",
-          features: ["1 Device", "4K/FHD/HD Quality", "Anti-Freeze Technology", "24/7 Support"],
+          features: ["1 Device", "4K/8K Ultra HD", "Live TV + VOD", "Anti-Freeze Technology", "24/7 Premium Support"],
           button: "Order Now"
         },
         {
-          name: "Premium",
-          price: "€40",
+          name: "Semi-Annual",
+          price: "€29",
           period: "6 Months",
-          features: ["2 Connections", "4K/FHD/HD Quality", "Anti-Freeze Technology", "VIP Support", "VOD Library"],
+          features: ["1 Device", "4K/8K Ultra HD", "Live TV + VOD", "Anti-Freeze Technology", "24/7 Premium Support"],
+          button: "Order Now"
+        },
+        {
+          name: "Annual Pass",
+          price: "€49",
+          period: "12 Months",
+          features: ["1 Device", "4K/8K Ultra HD", "Live TV + VOD", "Anti-Freeze Technology", "VIP Priority Support"],
           button: "Order Now",
           recommended: true
-        },
-        {
-          name: "Ultimate",
-          price: "€65",
-          period: "12 Months",
-          features: ["3 Connections", "4K/FHD/HD Quality", "Anti-Freeze Technology", "VIP Support", "VOD + Series"],
-          button: "Order Now"
         }
       ]
     },
     faq: {
       title: "Frequently Asked Questions",
       items: [
+        { question: "What channels are included?", answer: "We provide over 15,000 live channels from around the world, including Sports, News, Movies, and Kids channels in 4K/FHD quality." },
         { question: "How fast is the delivery?", answer: "Delivery is instant. You will receive your credentials via WhatsApp or Email immediately after payment." },
         { question: "Does it work on my device?", answer: "Yes! We support Smart TVs (Samsung, LG), Android Box, Firestick, Apple TV, Mag, PC, and Mobile." },
-        { question: "Do I need a VPN?", answer: "No, our service is secure and does not require a VPN. However, you can use one if you prefer." },
-        { question: "What internet speed do I need?", answer: "We recommend at least 12 Mbps for 4K streaming and 8 Mbps for HD channels." }
+        { question: "Do I need a VPN?", answer: "No, our service is secure. However, we can activate a VPN remotely on your account upon request." }
       ]
     },
     support: {
@@ -98,9 +110,9 @@ export const TRANSLATIONS: Record<Language, Content> = {
   },
   [Language.FR]: {
     seo: {
-      title: "RedStream IPTV | Meilleur IPTV 4K France - Anti-Coupure",
-      description: "Profitez du meilleur service IPTV en France. +15 000 Chaînes, Films et Séries en 4K/8K. Sans coupure, Support 24/7, Compatible tous appareils.",
-      keywords: "IPTV France, Abonnement IPTV, Streaming 4K, IPTV Pas Cher, Meilleur IPTV 2024, Chaines Sport, VOD Illimité"
+      title: "RedStream IPTV | Meilleur Abonnement IPTV 4K France",
+      description: "Abonnement IPTV Premium. +15 000 Chaînes FR/Int, Films & Séries. Compatible Smart TV, Android Box, Mag, PC. Sans coupure, Support 24/7.",
+      keywords: "IPTV France, Abonnement IPTV, Meilleur IPTV, IPTV Smarters Pro, Code Xtream, M3U France, Boitier Android IPTV, Chaines Canal, Bein Sport Gratuit, IPTV Stable"
     },
     nav: {
       home: "Accueil",
@@ -124,7 +136,8 @@ export const TRANSLATIONS: Record<Language, Content> = {
       title: "DERNIÈRES NOUVEAUTÉS",
       subtitle: "Accès illimité à +50 000 Films & Séries VOD",
       category_movies: "Films Récents",
-      category_series: "Séries Tendances"
+      category_series: "Séries Tendances",
+      included_badge: "INCLUS"
     },
     features: {
       title: "Pourquoi Choisir RedStream ?",
@@ -137,41 +150,46 @@ export const TRANSLATIONS: Record<Language, Content> = {
         { title: "Support Premium 24/7", desc: "Équipe dédiée prête à aider via WhatsApp." }
       ]
     },
+    supportedDevices: {
+      title: "Appareils Compatibles",
+      subtitle: "Regardez vos contenus préférés sur tous vos écrans.",
+      items: ["Smart TV", "Box Android", "iOS / Apple", "Firestick", "Windows PC", "macOS"]
+    },
     pricing: {
       title: "Nos Formules",
       paymentTitle: "MÉTHODES DE PAIEMENT",
       plans: [
         {
-          name: "Starter",
-          price: "15€",
+          name: "Pass Mensuel",
+          price: "12€",
           period: "1 Mois",
-          features: ["1 Appareil", "Qualité 4K/FHD/HD", "Technologie Anti-Freeze", "Support 24/7"],
+          features: ["1 Appareil", "Qualité 4K/8K UHD", "TV Direct + VOD", "Anti-Freeze", "Support 24/7"],
           button: "Commander"
         },
         {
-          name: "Premium",
-          price: "40€",
+          name: "Pass Semestriel",
+          price: "29€",
           period: "6 Mois",
-          features: ["2 Connexions", "Qualité 4K/FHD/HD", "Technologie Anti-Freeze", "Support VIP", "Bibliothèque VOD"],
+          features: ["1 Appareil", "Qualité 4K/8K UHD", "TV Direct + VOD", "Anti-Freeze", "Support 24/7"],
+          button: "Commander"
+        },
+        {
+          name: "Pass Annuel",
+          price: "49€",
+          period: "12 Mois",
+          features: ["1 Appareil", "Qualité 4K/8K UHD", "TV Direct + VOD", "Anti-Freeze Max", "Support Prioritaire"],
           button: "Commander",
           recommended: true
-        },
-        {
-          name: "Ultimate",
-          price: "65€",
-          period: "12 Mois",
-          features: ["3 Connexions", "Qualité 4K/FHD/HD", "Technologie Anti-Freeze", "Support VIP", "VOD + Séries"],
-          button: "Commander"
         }
       ]
     },
     faq: {
       title: "Questions Fréquentes",
       items: [
+        { question: "Quelles sont les chaînes incluses ?", answer: "Nous proposons plus de 15 000 chaînes en direct du monde entier, incluant Sports, Cinéma, Enfants, Documentaires en 4K/FHD." },
         { question: "Quelle est la vitesse de livraison ?", answer: "La livraison est immédiate. Vous recevez vos identifiants par WhatsApp ou Email juste après le paiement." },
         { question: "Est-ce compatible avec mon appareil ?", answer: "Oui ! Nous supportons Smart TV (Samsung, LG), Android Box, Firestick, Apple TV, Mag, PC et Mobile." },
-        { question: "Ai-je besoin d'un VPN ?", answer: "Non, notre service est sécurisé et ne nécessite pas de VPN. Cependant, vous pouvez en utiliser un si vous le souhaitez." },
-        { question: "Quelle vitesse internet est requise ?", answer: "Nous recommandons au moins 12 Mbps pour la 4K et 8 Mbps pour la HD." }
+        { question: "Ai-je besoin d'un VPN ?", answer: "Non, notre service est sécurisé. Nous pouvons activer un VPN à distance sur votre compte sur simple demande." }
       ]
     },
     support: {
@@ -188,8 +206,8 @@ export const TRANSLATIONS: Record<Language, Content> = {
   [Language.IT]: {
     seo: {
       title: "RedStream IPTV | Miglior IPTV Italia 4K - Stabile",
-      description: "Scopri il miglior servizio IPTV in Italia. Canali Sky, DAZN, Film e Serie in 4K. Nessun blocco, Assistenza 24/7. Prova ora!",
-      keywords: "IPTV Italia, Abbonamento IPTV, Streaming Calcio, Sky Gratis, IPTV Stabile, Miglior IPTV, VOD"
+      description: "Scopri il miglior servizio IPTV in Italia. Canali Sky, DAZN, Film e Serie in 4K. Nessun blocco, Assistenza 24/7. Compatibile Smart TV e Android.",
+      keywords: "IPTV Italia, Abbonamento IPTV, Liste M3U Italia, IPTV Smarters, Sky Gratis, DAZN Streaming, Android Box IPTV, Miglior Pezzotto, IPTV Senza Blocchi"
     },
     nav: {
       home: "Home",
@@ -213,7 +231,8 @@ export const TRANSLATIONS: Record<Language, Content> = {
       title: "ULTIME USCITE",
       subtitle: "Accesso illimitato a +50.000 Film e Serie VOD",
       category_movies: "Film Recenti",
-      category_series: "Serie di Tendenza"
+      category_series: "Serie di Tendenza",
+      included_badge: "INCLUSO"
     },
     features: {
       title: "Perché Scegliere RedStream?",
@@ -226,41 +245,46 @@ export const TRANSLATIONS: Record<Language, Content> = {
         { title: "Supporto 24/7", desc: "Team dedicato pronto ad aiutare via WhatsApp." }
       ]
     },
+    supportedDevices: {
+      title: "Dispositivi Supportati",
+      subtitle: "Guarda i tuoi contenuti preferiti su qualsiasi schermo.",
+      items: ["Smart TV", "Android Box", "iOS / Apple", "Firestick", "Windows PC", "macOS"]
+    },
     pricing: {
       title: "Piani di Abbonamento",
       paymentTitle: "METODI DI PAGAMENTO",
       plans: [
         {
-          name: "Starter",
-          price: "€15",
+          name: "Pass Mensile",
+          price: "€12",
           period: "1 Mese",
-          features: ["1 Dispositivo", "Qualità 4K/FHD/HD", "Anti-Freeze", "Supporto 24/7"],
+          features: ["1 Dispositivo", "Qualità 4K/8K", "Live TV + VOD", "Anti-Freeze", "Supporto 24/7"],
           button: "Ordina Ora"
         },
         {
-          name: "Premium",
-          price: "€40",
+          name: "Pass Semestrale",
+          price: "€29",
           period: "6 Mesi",
-          features: ["2 Connessioni", "Qualità 4K/FHD/HD", "Anti-Freeze", "Supporto VIP", "Libreria VOD"],
+          features: ["1 Dispositivo", "Qualità 4K/8K", "Live TV + VOD", "Anti-Freeze", "Supporto 24/7"],
+          button: "Ordina Ora"
+        },
+        {
+          name: "Pass Annuale",
+          price: "€49",
+          period: "12 Mesi",
+          features: ["1 Dispositivo", "Qualità 4K/8K", "Live TV + VOD", "Anti-Freeze Max", "Supporto Prioritario"],
           button: "Ordina Ora",
           recommended: true
-        },
-        {
-          name: "Ultimate",
-          price: "€65",
-          period: "12 Mesi",
-          features: ["3 Connessioni", "Qualità 4K/FHD/HD", "Anti-Freeze", "Supporto VIP", "VOD + Serie"],
-          button: "Ordina Ora"
         }
       ]
     },
     faq: {
       title: "Domande Frequenti",
       items: [
+        { question: "Quali canali sono inclusi?", answer: "Offriamo oltre 15.000 canali live da tutto il mondo, inclusi Sport, Film e Bambini in qualità 4K/FHD." },
         { question: "Quanto è veloce la consegna?", answer: "La consegna è immediata. Riceverai le credenziali via WhatsApp o Email subito dopo il pagamento." },
         { question: "Funziona sul mio dispositivo?", answer: "Sì! Supportiamo Smart TV, Android Box, Firestick, Apple TV, Mag, PC e Smartphone." },
-        { question: "Serve una VPN?", answer: "No, il servizio è sicuro e non richiede VPN. Tuttavia puoi usarne una se preferisci." },
-        { question: "Che velocità internet serve?", answer: "Raccomandiamo almeno 12 Mbps per il 4K e 8 Mbps per l'HD." }
+        { question: "Serve una VPN?", answer: "No, il servizio è sicuro. Possiamo attivare una VPN da remoto sul tuo account su richiesta." }
       ]
     },
     support: {
@@ -276,9 +300,9 @@ export const TRANSLATIONS: Record<Language, Content> = {
   },
   [Language.ES]: {
     seo: {
-      title: "RedStream IPTV | Mejor IPTV España y Latino 4K",
-      description: "El mejor servicio IPTV en español. +15,000 Canales, Películas y Series. Sin cortes, Soporte 24/7. Compatible con Smart TV y Android.",
-      keywords: "IPTV España, IPTV Latino, Canales Futbol, Streaming 4K, Listas M3U, Mejor IPTV, Sin Cortes"
+      title: "RedStream IPTV | Mejor IPTV España y Latino 4K - Estable",
+      description: "El mejor servicio IPTV 2024. +15,000 Canales, Películas y Series. Sin cortes. Compatible con Smart TV, Android, Firestick. Soporte 24/7.",
+      keywords: "IPTV España, IPTV Latino, Listas M3U Gratis, IPTV Smarters Pro, Ver Futbol Online, Movistar Plus Gratis, Android TV Box, Mejor IPTV Sin Cortes"
     },
     nav: {
       home: "Inicio",
@@ -302,7 +326,8 @@ export const TRANSLATIONS: Record<Language, Content> = {
       title: "ÚLTIMOS LANZAMIENTOS",
       subtitle: "Acceso ilimitado a +50,000 Películas y Series VOD",
       category_movies: "Películas Nuevas",
-      category_series: "Series en Tendencia"
+      category_series: "Series en Tendencia",
+      included_badge: "INCLUIDO"
     },
     features: {
       title: "¿Por qué elegir RedStream?",
@@ -315,41 +340,46 @@ export const TRANSLATIONS: Record<Language, Content> = {
         { title: "Soporte 24/7", desc: "Equipo dedicado listo para ayudar vía WhatsApp." }
       ]
     },
+    supportedDevices: {
+      title: "Dispositivos Compatibles",
+      subtitle: "Disfruta de tu contenido en cualquier dispositivo.",
+      items: ["Smart TV", "Android Box", "iOS / Apple", "Firestick", "Windows PC", "macOS"]
+    },
     pricing: {
       title: "Planes de Suscripción",
       paymentTitle: "MÉTODOS DE PAGO",
       plans: [
         {
-          name: "Starter",
-          price: "€15",
+          name: "Pase Mensual",
+          price: "€12",
           period: "1 Mes",
-          features: ["1 Dispositivo", "Calidad 4K/FHD/HD", "Anti-Freeze", "Soporte 24/7"],
+          features: ["1 Dispositivo", "Calidad 4K/8K", "TV en Vivo + VOD", "Anti-Freeze", "Soporte 24/7"],
           button: "Pedir Ahora"
         },
         {
-          name: "Premium",
-          price: "€40",
+          name: "Pase Semestral",
+          price: "€29",
           period: "6 Meses",
-          features: ["2 Conexiones", "Calidad 4K/FHD/HD", "Anti-Freeze", "Soporte VIP", "Biblioteca VOD"],
+          features: ["1 Dispositivo", "Calidad 4K/8K", "TV en Vivo + VOD", "Anti-Freeze", "Soporte 24/7"],
+          button: "Pedir Ahora"
+        },
+        {
+          name: "Pase Anual",
+          price: "€49",
+          period: "12 Meses",
+          features: ["1 Dispositivo", "Calidad 4K/8K", "TV en Vivo + VOD", "Anti-Freeze Max", "Soporte Prioritario"],
           button: "Pedir Ahora",
           recommended: true
-        },
-        {
-          name: "Ultimate",
-          price: "€65",
-          period: "12 Meses",
-          features: ["3 Conexiones", "Calidad 4K/FHD/HD", "Anti-Freeze", "Soporte VIP", "VOD + Series"],
-          button: "Pedir Ahora"
         }
       ]
     },
     faq: {
       title: "Preguntas Frecuentes",
       items: [
+        { question: "¿Qué canales están incluidos?", answer: "Ofrecemos más de 15,000 canales en vivo de todo el mundo, incluyendo Deportes, Cine y Niños en calidad 4K/FHD." },
         { question: "¿Qué tan rápida es la entrega?", answer: "La entrega es inmediata. Recibirás tus credenciales por WhatsApp o Email justo después del pago." },
         { question: "¿Funciona en mi dispositivo?", answer: "¡Sí! Soportamos Smart TV, Android Box, Firestick, Apple TV, Mag, PC y Móvil." },
-        { question: "¿Necesito una VPN?", answer: "No, nuestro servicio es seguro y no requiere VPN. Sin embargo, puedes usar una si prefieres." },
-        { question: "¿Qué velocidad de internet necesito?", answer: "Recomendamos al menos 12 Mbps para 4K y 8 Mbps para HD." }
+        { question: "¿Necesito una VPN?", answer: "No, nuestro servicio es seguro. Podemos activar una VPN de forma remota en su cuenta bajo petición." }
       ]
     },
     support: {
@@ -365,9 +395,9 @@ export const TRANSLATIONS: Record<Language, Content> = {
   },
   [Language.AR]: {
     seo: {
-      title: "RedStream IPTV | أفضل اشتراك IPTV بدون تقطيع 4K",
-      description: "أفضل خدمة IPTV في العالم العربي. +15,000 قناة رياضية وترفيهية. جودة 4K حقيقية، بدون تقطيع، دعم فني 24/7. جرب الآن!",
-      keywords: "اشتراك IPTV, IPTV 2024, قنوات رياضية, بي ان سبورت, شاهد VIP, افضل اشتراك, بدون تقطيع"
+      title: "RedStream IPTV | أفضل اشتراك IPTV 4K بدون تقطيع",
+      description: "أقوى سيرفر IPTV في العالم. +15000 قناة رياضية وترفيهية 4K. يدعم Smarters, Android Box, شاشات سمارت. تجربة مجانية ودعم 24/7.",
+      keywords: "اشتراك IPTV, IPTV Smarters Pro, قنوات بين سبورت, شاهد VIP مجانا, سيرفر IPTV قوي, بدون تقطيع, تطبيق IPTV, ملفات M3U, قنوات عربية 4K"
     },
     nav: {
       home: "الرئيسية",
@@ -391,7 +421,8 @@ export const TRANSLATIONS: Record<Language, Content> = {
       title: "أحدث الإصدارات",
       subtitle: "وصول غير محدود لأكثر من 50,000 فيلم ومسلسل",
       category_movies: "أحدث الأفلام",
-      category_series: "مسلسلات رائجة"
+      category_series: "مسلسلات رائجة",
+      included_badge: "مشمول"
     },
     features: {
       title: "لماذا تختار RedStream؟",
@@ -404,41 +435,46 @@ export const TRANSLATIONS: Record<Language, Content> = {
         { title: "دعم فني 24/7", desc: "فريق دعم مخصص جاهز للمساعدة عبر واتساب." }
       ]
     },
+    supportedDevices: {
+      title: "الأجهزة المدعومة",
+      subtitle: "شاهد محتواك المفضل على جميع أجهزتك.",
+      items: ["شاشة ذكية", "أندرويد بوكس", "أجهزة آبل", "فاير ستيك", "كمبيوتر", "ماك"]
+    },
     pricing: {
       title: "باقات الاشتراك",
       paymentTitle: "طرق الدفع المقبولة",
       plans: [
         {
-          name: "البداية",
-          price: "€15",
+          name: "باقة شهرية",
+          price: "€12",
           period: "1 شهر",
-          features: ["جهاز واحد", "جودة 4K/FHD/HD", "تقنية منع التجميد", "دعم 24/7"],
+          features: ["جهاز واحد", "جودة 4K/8K", "قنوات + مكتبة VOD", "تقنية منع التجميد", "دعم 24/7"],
           button: "اطلب الآن"
         },
         {
-          name: "المميزة",
-          price: "€40",
+          name: "نصف سنوي",
+          price: "€29",
           period: "6 أشهر",
-          features: ["اتصالين", "جودة 4K/FHD/HD", "تقنية منع التجميد", "دعم VIP", "مكتبة أفلام ومسلسلات"],
+          features: ["جهاز واحد", "جودة 4K/8K", "قنوات + مكتبة VOD", "تقنية منع التجميد", "دعم 24/7"],
+          button: "اطلب الآن"
+        },
+        {
+          name: "الباقة السنوية",
+          price: "€49",
+          period: "12 شهر",
+          features: ["جهاز واحد", "جودة 4K/8K", "قنوات + مكتبة VOD", "أعلى ثبات (VIP)", "دعم فني ذو أولوية"],
           button: "اطلب الآن",
           recommended: true
-        },
-        {
-          name: "القصوى",
-          price: "€65",
-          period: "12 شهر",
-          features: ["3 اتصالات", "جودة 4K/FHD/HD", "تقنية منع التجميد", "دعم VIP", "مكتبة شاملة"],
-          button: "اطلب الآن"
         }
       ]
     },
     faq: {
       title: "الأسئلة الشائعة",
       items: [
+        { question: "ما هي القنوات المشمولة؟", answer: "نقدم أكثر من 15000 قناة مباشرة تشمل الرياضة والأفلام والأطفال بجودة 4K." },
         { question: "ما سرعة التسليم؟", answer: "التسليم فوري. ستتلقى بيانات الاشتراك عبر واتساب أو البريد الإلكتروني فور الدفع." },
         { question: "هل يعمل على جهازي؟", answer: "نعم! ندعم جميع الأجهزة الذكية، أندرويد بوكس، الهواتف، والحواسيب." },
-        { question: "هل أحتاج إلى VPN؟", answer: "لا، خدمتنا آمنة ولا تتطلب VPN. لكن يمكنك استخدامه إذا رغبت." },
-        { question: "ما هي سرعة الإنترنت المطلوبة؟", answer: "نوصي بسرعة 12 ميجابايت على الأقل لجودة 4K و 8 ميجابايت لجودة HD." }
+        { question: "هل أحتاج إلى VPN؟", answer: "لا، خدمتنا آمنة. يمكننا تفعيل VPN عن بُعد على حسابك عند الطلب." }
       ]
     },
     support: {

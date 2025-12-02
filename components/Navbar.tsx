@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Language, Content } from '../types';
 import LanguageSelector from './LanguageSelector';
 import { Menu, X, Terminal } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants';
+import { createWhatsAppLink } from '../constants';
 
 interface Props {
   lang: Language;
@@ -57,10 +57,10 @@ const Navbar: React.FC<Props> = ({ lang, content, onLanguageChange }) => {
             ))}
             <LanguageSelector currentLang={lang} onLanguageChange={onLanguageChange} />
             <a 
-              href={WHATSAPP_LINK} 
+              href={createWhatsAppLink("Hello RedStream, I would like to request a Free Trial.")}
               target="_blank" 
               rel="noreferrer"
-              className="btn-tech btn-tech-red text-white text-xs font-bold py-2.5 px-6 rounded-sm"
+              className="btn-tech btn-tech-red text-white text-xs font-bold py-2.5 px-6 rounded-lg"
             >
               {content.tryNow}
             </a>
@@ -93,10 +93,10 @@ const Navbar: React.FC<Props> = ({ lang, content, onLanguageChange }) => {
             </a>
           ))}
           <a 
-            href={WHATSAPP_LINK}
+            href={createWhatsAppLink("Hello RedStream, I would like to request a Free Trial.")}
             target="_blank" 
             rel="noreferrer" 
-            className="block text-center btn-tech btn-tech-red text-white py-3 rounded-sm font-bold"
+            className="block text-center btn-tech btn-tech-red text-white py-3 rounded-lg font-bold"
           >
             {content.tryNow}
           </a>

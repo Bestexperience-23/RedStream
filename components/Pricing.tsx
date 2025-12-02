@@ -1,7 +1,7 @@
 import React from 'react';
 import { Content } from '../types';
 import { Check, Star } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants';
+import { createWhatsAppLink } from '../constants';
 import PaymentMethods from './PaymentMethods';
 
 interface Props {
@@ -59,7 +59,7 @@ const Pricing: React.FC<Props> = ({ content }) => {
               </div>
 
               <a 
-                href={WHATSAPP_LINK} 
+                href={createWhatsAppLink(`Hello, I want to subscribe to ${plan.name} (${plan.period}) for ${plan.price}`)} 
                 target="_blank" 
                 rel="noreferrer"
                 className={`w-full py-4 px-4 rounded-lg font-bold text-center text-sm tracking-widest uppercase btn-tech ${

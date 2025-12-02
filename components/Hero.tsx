@@ -1,18 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Content } from '../types';
 import { Play, CheckCircle, ChevronRight, Zap } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants';
+import { createWhatsAppLink } from '../constants';
 
 interface Props {
   content: Content['hero'];
 }
 
 const Hero: React.FC<Props> = ({ content }) => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Only update if the hero is likely in view (optimization)
+      if (window.scrollY < window.innerHeight) {
+        setScrollY(window.scrollY);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-950 pt-20">
       
-      {/* Background Elements - Elegant & Subtle */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
+      {/* Background Elements - Elegant & Subtle Parallax */}
+      <div 
+        className="absolute inset-0 z-0 overflow-hidden pointer-events-none will-change-transform"
+        style={{ transform: `translateY(${scrollY * 0.4}px)` }}
+      >
         {/* Soft Red Glow Top Center */}
         <div className="absolute top-[-10%] left-1/2 transform -translate-x-1/2 w-[800px] h-[600px] bg-red-600/10 rounded-full blur-[120px]"></div>
         
@@ -69,7 +86,7 @@ const Hero: React.FC<Props> = ({ content }) => {
         {/* CTA Buttons - Modern Luxury Engineering Style */}
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <a 
-            href={WHATSAPP_LINK}
+            href={createWhatsAppLink("Hello RedStream, I want to get started with RedStream IPTV subscription.")}
             target="_blank"
             rel="noreferrer"
             className="btn-tech btn-tech-red group w-full sm:w-auto px-10 py-5 text-white font-bold text-sm tracking-widest rounded-lg flex items-center justify-center uppercase"

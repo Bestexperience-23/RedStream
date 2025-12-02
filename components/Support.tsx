@@ -1,7 +1,7 @@
 import React from 'react';
 import { Content } from '../types';
 import { MessageCircle } from 'lucide-react';
-import { WHATSAPP_LINK } from '../constants';
+import { createWhatsAppLink } from '../constants';
 
 interface Props {
   content: Content['support'];
@@ -24,7 +24,7 @@ const Support: React.FC<Props> = ({ content }) => {
         </p>
 
         <a 
-          href={WHATSAPP_LINK}
+          href={createWhatsAppLink("Hello Support, I need assistance regarding RedStream IPTV.")}
           target="_blank" 
           rel="noreferrer"
           className="btn-tech btn-tech-whatsapp inline-flex items-center space-x-3 text-white font-bold py-5 px-10 rounded-full"
