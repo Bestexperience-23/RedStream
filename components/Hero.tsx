@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Content } from '../types';
 import { Play, CheckCircle, ChevronRight, Zap } from 'lucide-react';
-<<<<<<< HEAD
 import { createWhatsAppLink } from '../constants';
-=======
-import { WHATSAPP_LINK } from '../constants';
->>>>>>> 306d59a6c13fb63ad14aa14788ba79f30317c17d
 
 interface Props {
   content: Content['hero'];
