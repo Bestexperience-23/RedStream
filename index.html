@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- GOOGLE FAVICON COMPLIANCE (Must be high in head) -->
+    <link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='12' fill='%23DC2626'/%3E%3Cpath d='M16 16L32 32L16 48' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M36 48H52' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='180' height='180' rx='40' fill='%23DC2626'/%3E%3Cpath d='M45 45L90 90L45 135' stroke='white' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M100 135H145' stroke='white' stroke-width='16' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
     <title>RedStream | Premium IPTV Service 4K/8K</title>
     
-    <!-- Favicon (Integrated SVG for 100% Uptime) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='12' fill='%23DC2626'/%3E%3Cpath d='M16 16L32 32L16 48' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M36 48H52' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-    <link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='12' fill='%23DC2626'/%3E%3Cpath d='M16 16L32 32L16 48' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M36 48H52' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='12' fill='%23DC2626'/%3E%3Cpath d='M16 16L32 32L16 48' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M36 48H52' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
-
     <!-- SEO Essentials -->
     <meta name="description" content="RedStream IPTV - #1 Premium IPTV Service. 15,000+ Channels, 4K/8K UHD, Anti-Freeze Technology. 24/7 Support. Compatible with Smart TV, Android, iOS, Mag." />
     <meta name="keywords" content="IPTV, Premium IPTV, 4K Streaming, Live Sports, M3U, Smart IPTV, IPTV Subscription, Best IPTV 2024" />
@@ -22,7 +22,6 @@
     <meta property="og:url" content="https://redstream-iptv.com/" />
     <meta property="og:title" content="RedStream | Best 4K IPTV Service 2024" />
     <meta property="og:description" content="Get access to 15,000+ Live Channels and 50,000+ VODs in 4K. Anti-Freeze Technology. 24/7 Support. Try it now!" />
-    <!-- Fallback social image -->
     <meta property="og:image" content="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=1200" />
 
     <!-- Twitter -->
@@ -42,7 +41,7 @@
           extend: {
             colors: {
               red: {
-                500: '#ef4444', // Softer Red
+                500: '#ef4444', 
                 600: '#dc2626',
                 700: '#b91c1c',
                 900: '#7f1d1d',
@@ -58,9 +57,6 @@
               sans: ['Inter', 'sans-serif'],
               mono: ['JetBrains Mono', 'monospace'],
               display: ['Russo One', 'sans-serif'],
-            },
-            backgroundSize: {
-              '200%': '200% auto',
             },
             animation: {
               'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
@@ -95,14 +91,13 @@
     <style>
       html {
         scroll-behavior: smooth;
-        scroll-padding-top: 80px; /* Ensures anchor links don't hide behind fixed header */
+        scroll-padding-top: 80px; 
       }
       body {
         background-color: #0a0a0a;
         color: #e5e5e5;
         overflow-x: hidden;
       }
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 10px;
       }
@@ -117,20 +112,12 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #dc2626; 
       }
-      
-      .clip-path-slant {
-        clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
-      }
-
-      /* LUXURY ENGINEERING BUTTONS */
       .btn-tech {
         position: relative;
         overflow: hidden;
         transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         isolation: isolate;
       }
-
-      /* Reflet lumineux (Sheen) */
       .btn-tech::after {
         content: '';
         position: absolute;
@@ -148,19 +135,14 @@
         transition: left 0.5s ease;
         z-index: 1;
       }
-
       .btn-tech:hover::after {
         left: 150%;
         transition: left 0.7s ease-in-out;
       }
-
-      /* Expansion du texte (Engineering feel) */
       .btn-tech:hover {
         letter-spacing: 0.05em;
         transform: translateY(-2px);
       }
-
-      /* Red Primary Button Style */
       .btn-tech-red {
         background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
         box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -171,8 +153,6 @@
         box-shadow: 0 8px 30px rgba(220, 38, 38, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
         border-color: #ef4444;
       }
-
-      /* Dark Secondary Button Style */
       .btn-tech-dark {
         background: rgba(23, 23, 23, 0.8);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -185,8 +165,6 @@
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
         color: white;
       }
-
-      /* White Button Style */
       .btn-tech-white {
         background: white;
         color: black;
@@ -196,8 +174,6 @@
         background: #f5f5f5;
         box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
       }
-      
-      /* WhatsApp Button Special */
       .btn-tech-whatsapp {
         background: #25D366;
         box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
@@ -206,7 +182,6 @@
         background: #20bd5a;
         box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
       }
-
     </style>
   <script type="importmap">
 {
