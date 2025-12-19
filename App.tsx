@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -29,7 +28,6 @@ function App() {
     }
 
     // --- SEO ENGINE START ---
-
     document.title = content.seo.title;
 
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -48,14 +46,14 @@ function App() {
     }
     metaKeywords.setAttribute('content', content.seo.keywords);
 
-    const updateMeta = (property: string, content: string) => {
+    const updateMeta = (property: string, contentStr: string) => {
       let element = document.querySelector(`meta[property="${property}"]`);
       if (!element) {
         element = document.createElement('meta');
         element.setAttribute('property', property);
         document.head.appendChild(element);
       }
-      element.setAttribute('content', content);
+      element.setAttribute('content', contentStr);
     };
 
     updateMeta('og:title', content.seo.title);
@@ -72,69 +70,86 @@ function App() {
       document.head.appendChild(schemaScript);
     }
 
-    const schemaData = {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "RedStream IPTV Premium Subscription",
-      "image": "data:image/svg+xml,%3Csvg width='512' height='512' viewBox='0 0 512 512' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='512' height='512' rx='64' fill='%23DC2626'/%3E%3Cpath d='M128 128L256 256L128 384' stroke='white' stroke-width='48' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M288 384H416' stroke='white' stroke-width='48' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E",
-      "description": content.seo.description,
-      "brand": {
-        "@type": "Brand",
-        "name": "RedStream"
-      },
-      "sku": "REDSTREAM-PREMIUM-P12M",
-      "offers": {
-        "@type": "Offer",
-        "url": window.location.href,
-        "priceCurrency": "EUR",
-        "price": "49.00",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition",
-        "shippingDetails": {
-          "@type": "OfferShippingDetails",
-          "shippingRate": {
-            "@type": "MonetaryAmount",
-            "value": "0",
-            "currency": "EUR"
-          },
-          "deliveryTime": {
-            "@type": "ShippingDeliveryTime",
-            "handlingTime": {
-              "@type": "QuantitativeValue",
-              "minValue": "0",
-              "maxValue": "0",
-              "unitCode": "DAY"
-            },
-            "transitTime": {
-              "@type": "QuantitativeValue",
-              "minValue": "0",
-              "maxValue": "0",
-              "unitCode": "DAY"
-            }
-          },
-          "shippingDestination": {
-            "@type": "DefinedRegion",
-            "addressCountry": ["FR", "BE", "CH", "CA", "ES", "IT", "MA"]
-          }
-        },
-        "hasMerchantReturnPolicy": {
-          "@type": "MerchantReturnPolicy",
-          "applicableCountry": "FR",
-          "returnPolicyCategory": "https://schema.org/MerchantReturnPolicyPrepaid",
-          "merchantReturnDays": 1,
-          "returnMethod": "https://schema.org/ReturnByMail",
-          "returnFees": "https://schema.org/FreeReturn"
+    const logoUrl = "data:image/svg+xml,%3Csvg width='512' height='512' viewBox='0 0 512 512' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='512' height='512' rx='64' fill='%23DC2626'/%3E%3Cpath d='M128 128L256 256L128 384' stroke='white' stroke-width='48' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M288 384H416' stroke='white' stroke-width='48' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E";
+
+    const schemaData = [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RedStream IPTV",
+        "url": window.location.origin,
+        "logo": logoUrl,
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+212-694-843-943",
+          "contactType": "customer service",
+          "availableLanguage": ["French", "English", "Arabic", "Spanish", "Italian"]
         }
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "1250",
-        "bestRating": "5",
-        "worstRating": "1"
+      {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "RedStream IPTV Premium Subscription",
+        "image": logoUrl,
+        "description": content.seo.description,
+        "brand": {
+          "@type": "Brand",
+          "name": "RedStream"
+        },
+        "sku": "REDSTREAM-PREMIUM-P12M",
+        "offers": {
+          "@type": "Offer",
+          "url": window.location.href,
+          "priceCurrency": "EUR",
+          "price": "49.00",
+          "priceValidUntil": "2026-12-31",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition",
+          "shippingDetails": {
+            "@type": "OfferShippingDetails",
+            "shippingRate": {
+              "@type": "MonetaryAmount",
+              "value": "0",
+              "currency": "EUR"
+            },
+            "deliveryTime": {
+              "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "0",
+                "unitCode": "DAY"
+              },
+              "transitTime": {
+                "@type": "QuantitativeValue",
+                "minValue": "0",
+                "maxValue": "0",
+                "unitCode": "DAY"
+              }
+            },
+            "shippingDestination": {
+              "@type": "DefinedRegion",
+              "addressCountry": ["FR", "BE", "CH", "CA", "ES", "IT", "MA"]
+            }
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "FR",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnPolicyPrepaid",
+            "merchantReturnDays": 1,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "1250",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
       }
-    };
+    ];
 
     schemaScript.textContent = JSON.stringify(schemaData);
 
