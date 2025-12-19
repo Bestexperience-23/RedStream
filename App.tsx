@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -29,10 +30,8 @@ function App() {
 
     // --- SEO ENGINE START ---
 
-    // 1. Update Document Title
     document.title = content.seo.title;
 
-    // 2. Update Meta Description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (!metaDesc) {
       metaDesc = document.createElement('meta');
@@ -41,7 +40,6 @@ function App() {
     }
     metaDesc.setAttribute('content', content.seo.description);
 
-    // 3. Update Meta Keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
       metaKeywords = document.createElement('meta');
@@ -50,7 +48,6 @@ function App() {
     }
     metaKeywords.setAttribute('content', content.seo.keywords);
 
-    // 4. Update Open Graph Data (Dynamic Social Previews)
     const updateMeta = (property: string, content: string) => {
       let element = document.querySelector(`meta[property="${property}"]`);
       if (!element) {
@@ -64,9 +61,9 @@ function App() {
     updateMeta('og:title', content.seo.title);
     updateMeta('og:description', content.seo.description);
     updateMeta('og:locale', lang.toLowerCase());
+    updateMeta('og:image', 'data:image/svg+xml,%3Csvg width="800" height="418" viewBox="0 0 800 418" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="800" height="418" fill="%230A0A0A"/%3E%3Crect x="336" y="145" width="128" height="128" rx="24" fill="%23DC2626"/%3E%3Cpath d="M376 177L416 209L376 241" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M416 241H448" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E');
 
     // 5. Inject JSON-LD Schema (Google Rich Snippets)
-    // This tells Google: "This is a Product with 4.9 stars and costs 49€"
     let schemaScript = document.querySelector('#schema-json-ld');
     if (!schemaScript) {
       schemaScript = document.createElement('script');
@@ -79,21 +76,56 @@ function App() {
       "@context": "https://schema.org/",
       "@type": "Product",
       "name": "RedStream IPTV Premium Subscription",
-      "image": "https://ibb.co/rK4kkZmD",
+      "image": "data:image/svg+xml,%3Csvg width='512' height='512' viewBox='0 0 512 512' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='512' height='512' rx='64' fill='%23DC2626'/%3E%3Cpath d='M128 128L256 256L128 384' stroke='white' stroke-width='48' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M288 384H416' stroke='white' stroke-width='48' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E",
       "description": content.seo.description,
       "brand": {
         "@type": "Brand",
         "name": "RedStream"
       },
-      "sku": "IPTV-12M-PREMIUM",
+      "sku": "REDSTREAM-PREMIUM-P12M",
       "offers": {
         "@type": "Offer",
         "url": window.location.href,
         "priceCurrency": "EUR",
         "price": "49.00",
-        "priceValidUntil": "2025-12-31",
+        "priceValidUntil": "2026-12-31",
         "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition"
+        "itemCondition": "https://schema.org/NewCondition",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": "0",
+              "maxValue": "0",
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": "0",
+              "maxValue": "0",
+              "unitCode": "DAY"
+            }
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": ["FR", "BE", "CH", "CA", "ES", "IT", "MA"]
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "FR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnPolicyPrepaid",
+          "merchantReturnDays": 1,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
       },
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -105,8 +137,6 @@ function App() {
     };
 
     schemaScript.textContent = JSON.stringify(schemaData);
-
-    // --- SEO ENGINE END ---
 
   }, [lang, content]);
 
